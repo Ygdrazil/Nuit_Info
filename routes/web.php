@@ -27,3 +27,5 @@ Route::post('/createSauveteur', 'App\Http\Controllers\SauveteurController@create
 Route::get('/createSauveteur', function () { return view('sauveteur.createSauveteur'); })->middleware(['auth'])->name('createSauveteur');
 
 Route::get('/sauveteurs', 'App\Http\Controllers\SauveteurController@findAll')->name('sauveteurs');
+
+Route::get('/sauvetages', function() { return 'wip'; })->name('sauvetages');
