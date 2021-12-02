@@ -1,4 +1,12 @@
-<form action="{{ route('login.post') }}" method="post">
+@if ($errors->any())
+	<ul>
+	@foreach ($errors->all() as $error)
+		<li>{{$error}}</li>
+	@endforeach
+	</ul>
+@endif
+ 
+ <form action="{{ route('login.post') }}" method="post">
 	@csrf
 
 	<input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="Email" />
