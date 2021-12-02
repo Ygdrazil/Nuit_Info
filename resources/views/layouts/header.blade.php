@@ -1,4 +1,4 @@
-<!-- FOOTER -->
+<!-- HEADER -->
 <div class="wrapper">
     <nav>
     <input type="checkbox" id="show-search">
