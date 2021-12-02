@@ -65,7 +65,7 @@ body{
     filter: blur(20px);
 }
 
-#up .rocket img{
+#up .rocket .img_rocket{
     height: 5em;
     width: auto;
     cursor: pointer;

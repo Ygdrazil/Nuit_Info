@@ -24,7 +24,7 @@
         <!-- UP -->
         <div id="up">
             <div class="rocket">
-                <img src="{{ asset('pictures/rocket.png') }}">
+                <img class="img_rocket" src="{{ asset('pictures/rocket.png') }}">
             </div>
         </div>
 
