@@ -14,6 +14,7 @@ class AllUpdates extends Migration
     public function up()
     {
         Schema::table('bateau_sauvetage', function (Blueprint $table) {
+            $table->integer("id_bateau");
             $table->foreignId("id_bateau")->references('id_bateau')->on('bateau');
         });
 
