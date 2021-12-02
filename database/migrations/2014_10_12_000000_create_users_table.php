@@ -23,6 +23,10 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        Schema::update('soumission', function (Blueprint $table) {
+            $table->foreignId("email_user")->nullable()->references('users')->on('email');
+        });
     }
 
     /**
