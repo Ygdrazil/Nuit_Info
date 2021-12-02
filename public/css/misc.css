@@ -15,7 +15,7 @@ body{
 /* UP */
 
 .scene{
-    position: absolute;
+    position: fixed;
     background-color: red;
     bottom: 10%;
     right: 10%;
