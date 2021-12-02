@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Model\Sauveteur;
+use App\Models\Sauveteur;
 
 class SauveteurController extends Controller
 {
