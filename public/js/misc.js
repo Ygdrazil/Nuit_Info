@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", _ => {
 
     document.querySelector('.img_rocket').addEventListener('click', _ =>{
         document.querySelector('.visible').style.transition = '3s';
-        document.querySelector('.visible').style.bottom = '50rem';
+        document.querySelector('.visible').style.bottom = '60rem';
         window.scrollTo(0, 0);
     });
 
