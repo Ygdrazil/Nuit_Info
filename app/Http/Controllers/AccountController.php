@@ -59,4 +59,11 @@ class AccountController extends Controller
 		\Auth::login($new_user);
         return redirect(route('welcome'));
 	}
+
+	function logout()
+	{
+		\Auth::logout();
+		
+		return redirect(route('welcome'));
+	}
 }
