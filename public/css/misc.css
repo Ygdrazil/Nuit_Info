@@ -4,12 +4,15 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     min-height: 200vh;
-    scroll-behavior: smooth;
 }
 
 
