@@ -9,16 +9,13 @@
         <!-- Libs -->
     </head>
     <body>
+		<!-- HEADER -->
 		@include('layouts.header')
 
-        <!-- UP -->
-        <div id="up">
-            <div class="rocket">
-                <img class="img_rocket" src="{{ asset('pictures/rocket.png') }}">
-            </div>
-        </div>
+		<!-- MAIN -->
+		
 
-
+		<!-- FOOTER -->
 		@include('layouts.footer')
     </body>
 </html>

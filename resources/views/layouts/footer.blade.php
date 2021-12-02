@@ -1,3 +1,11 @@
+<!-- ROCKET -->
+<div id="up">
+	<div class="rocket">
+		<img class="img_rocket" src="{{ asset('pictures/rocket.png') }}">
+	</div>
+</div>
+
+<!-- FOOTER -->
 <footer id="footer">
 	<div class="waves">
 		<div id="wave1" class="wave"></div>
