@@ -5,8 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Accueil ⋆ Sauveteurs du dunkerquois</title>
-        <link rel="icon" href="{{ asset('pictures/boat.ico') }}" />
-        <link rel="icon" type="image/ico" href="{{ asset('pictures/boat.ico') }}" />
+        <link rel="icon" href="{{ asset('pictures/boat.png') }}" />
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/misc.css') }}">
