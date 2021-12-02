@@ -17,8 +17,9 @@ body{
 #up{
     position: fixed;
     z-index: 1001;
-    bottom: 5rem;
+    bottom: 3rem;
     right: 5rem;
+    height: 10rem;
     overflow: hidden;
     display: flex;
     justify-content: center;
