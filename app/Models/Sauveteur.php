@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class Sauveteur extends Model
+class Sauveteur extends Models
 {
     use HasFactory;
      /**
