@@ -29,8 +29,8 @@
             </li>
             <li><a href="#">Menu2</a></li>
             <li><a href="#">Menu3</a></li>
-            <li><a href="#">S'inscrire</a></li>
-            <li><a href="#">Se connecter</a></li>
+            <li><a href="{{ route('register') }}">S'inscrire</a></li>
+            <li><a href="{{ route('login') }}">Se connecter</a></li>
         </ul>
     </div>
     <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
