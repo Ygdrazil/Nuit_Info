@@ -6,19 +6,10 @@
     <body>
 		@include('layouts.header')
 
-       @foreach ($sauveteurs as $sauveteur)
-		<p>
-			{{$sauveteur->nom}}
-			{{$sauveteur->prenom}}
-			{{$sauveteur->dateNaissance}}
-			{{$sauveteur->naissance}}
-			{{$sauveteur->mort }} 
-			{{$sauveteur->description}}
-			{{$sauveteur->source}}  
-			</p>
-        <br>
-           
-       @endforeach
+		<section id="main">
+			
+		</section>
+
     	@include('layouts.footer')
     </body>
 </html>

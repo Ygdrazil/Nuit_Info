@@ -36,6 +36,8 @@ class SauveteurController extends Controller
     public function findAll()
     {
         $sauveteurs = Sauveteur::all();
+
+		dd($sauveteurs);
         return view('sauveteur.afficheSauveteur', compact('sauveteurs'));
     }
 }
