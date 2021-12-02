@@ -13,7 +13,7 @@
 		@include('layouts.header')
 
 		<!-- MAIN -->
-
+		
 
 		<!-- FOOTER -->
 		@include('layouts.footer')
