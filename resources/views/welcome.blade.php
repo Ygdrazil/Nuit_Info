@@ -13,8 +13,12 @@
 		@include('layouts.header')
 
 		<!-- MAIN -->
+		@extends('layouts.main')
+		@section('main')
+		
+		here
 
-
+		@endsection
 		<!-- FOOTER -->
 		@include('layouts.footer')
     </body>
