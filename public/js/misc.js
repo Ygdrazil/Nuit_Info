@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", _ => {
     // Events
 
     document.querySelector('.img_rocket').addEventListener('click', _ =>{
-        console.log('monte');
+        window.scrollTo(0, 0);
     });
 
 
