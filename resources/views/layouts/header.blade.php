@@ -5,7 +5,7 @@
     <input type="checkbox" id="show-menu">
     <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
     <div class="nav-content">
-    <div class="logo"><a href="#"><img src="https://testlehesscrew.weiha.online/pictures/boat.png"></a></div>
+    <div class="logo"><a href="."><img src="https://testlehesscrew.weiha.online/pictures/boat.png"></a></div>
         <ul class="links">
             <li>
                 <a href="#" class="desktop-link">Bateau</a>
