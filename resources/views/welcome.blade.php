@@ -13,7 +13,7 @@
 		@include('layouts.header')
 
 		<!-- MAIN -->
-		@extends('layouts.main')
+		@include('layouts.main')
 		@section('main')
 		
 		here
