@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+        @include('layouts.head')
     </head>
     <body>
         @include('layouts.header')
-        @include('layouts.head')
-        <form  action="{{ route('createSauveteur') }}" method="POST">
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <form action="{{ route('createSauveteur.post') }}" method="POST">
             @csrf
             <input type="text" name="nom" placeholder="Nom">
             <input type="text" name="prenom" placeholder="Prenom">

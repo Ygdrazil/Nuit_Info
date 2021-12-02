@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Model\Sauveteur;
+use App\Models\Sauveteur;
 
 class SauveteurController extends Controller
 {
@@ -36,6 +36,6 @@ class SauveteurController extends Controller
     public function findAll()
     {
         $sauveteurs = Sauveteur::all();
-        return view('afficheSauveteur', compact('sauveteurs'));
+        return view('sauveteur.afficheSauveteur', compact('sauveteurs'));
     }
 }
