@@ -26,9 +26,13 @@ window.addEventListener("DOMContentLoaded", _ => {
         window.scrollTo(0, 0);
     });
 
-    document.querySelector('.visible').addEventListener('transitionend', () => {
-        console.log('Transition ended');
-      });
+    var transition = document.querySelector('.visible');
+    if(transition != null){
+        transition.addEventListener('transitionend', () => {
+            console.log('Transition ended');
+        });
+    }
+    
 
 
 });
