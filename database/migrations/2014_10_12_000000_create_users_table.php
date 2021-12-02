@@ -24,9 +24,7 @@ class CreateUsersTable extends Migration
             $table->timestamps();
         });
 
-        Schema::update('soumission', function (Blueprint $table) {
-            $table->foreignId("email_user")->nullable()->references('users')->on('email');
-        });
+        
     }
 
     /**
