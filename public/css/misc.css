@@ -20,7 +20,6 @@ html{
 }
 
 body{
-    display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     min-height: 200vh;
@@ -344,10 +343,11 @@ nav .nav-content .links{
 /* FOOTER */
 
 #footer{
-    position: relative;
+    position: absolute;
     width: 100%;
     background: #3586ff;
     min-height: 100px;
+    bottom: -100vh;
     padding: 20px 50px;
     display: flex;
     justify-content: center;
