@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Accueil ⋆ Sauveteurs du dunkerquois</title>
-        <link rel="icon" href="{{ asset('pictures/boat.png') }}" />
 
         <!-- Styles -->
+        <link rel="icon" href="{{ asset('pictures/boat.png') }}" />
         <link rel="stylesheet" href="{{ asset('css/misc.css') }}">
 
         <!-- Scripts -->
@@ -19,6 +19,17 @@
 
     </head>
     <body>
+
+
+        <!-- UP -->
+        <div class="scene">
+            <div class="rocket">
+                <img src="{{ asset('pictures/rocket.png') }}">
+            </div>
+        </div>
+
+
+        <!-- FOOTER -->
         <footer id="footer">
             <div class="waves">
                 <div id="wave1" class="wave"></div>

@@ -12,6 +12,16 @@ body{
 }
 
 
+/* UP */
+
+.scene{
+    position: absolute;
+    background-color: red;
+    bottom: 10%;
+    right: 10%;
+}
+
+
 /* FOOTER */
 
 #footer{
