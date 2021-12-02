@@ -22,18 +22,6 @@ class CreateSauveteurTable extends Migration
             $table->text("description");
             $table->string("source")->nullable();
             //$table->timestamps();
-
-            Schema::update('participant', function (Blueprint $table) {
-                $table->foreignId("id_sauveteur")->references('id_sauveteur')->on('sauveteur')->nullable();
-            });
-
-            Schema::update('poste', function (Blueprint $table) {
-                $table->foreignId("id_sauveteur")->references('id_sauveteur')->on('sauveteur');
-            });
-
-            Schema::update('soumission', function (Blueprint $table) {
-                $table->foreignId("id_sauveteur")->references('id_sauveteur')->on('sauveteur')->nullable();
-            });
         });
     }
 
