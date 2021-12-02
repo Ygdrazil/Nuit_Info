@@ -29,4 +29,4 @@ Route::get('/createSauveteur', function () { return view('sauveteur.createSauvet
 Route::get('/sauveteurs', 'App\Http\Controllers\SauveteurController@findAll')->name('sauveteurs');
 
 Route::get('/sauvetages', function() { return 'wip'; })->name('sauvetages');
-Route::get('/bateaux', function() { return 'wip'; })->name('sauvetages');
+Route::get('/bateaux', function() { return 'wip'; })->name('bateaux');
