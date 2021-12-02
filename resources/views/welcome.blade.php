@@ -18,14 +18,6 @@
 
     </head>
     <body>
-        <header id="header">
-            Je suis le header
-        </header>
-
-        <section id="main">
-            Je suis le main
-        </section>
-
         <footer id="footer">
             <ul class="social_icon">
                 <li><a href="#"><ion-icon name="home-outline"></ion-icon></a></li>
