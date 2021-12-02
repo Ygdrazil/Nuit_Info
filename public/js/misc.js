@@ -26,15 +26,6 @@ window.addEventListener("DOMContentLoaded", _ => {
         window.scrollTo(0, 0);
     });
 
-    var transition = document.querySelector('.visible');
-    if(transition != null){
-        transition.addEventListener('transitionend', () => {
-            console.log('Transition ended');
-        });
-    }
-    
-
-
 });
 
 // Functions
