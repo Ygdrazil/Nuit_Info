@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --hue-color: 220;
+    --first-color: hsl(var(--hue-color), 70%, 50%);
+    --second-color: hsl(var(--hue-color), 75%, 60%);
+    --third-color: hsl(var(--hue-color), 80%, 70%);
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 html{
@@ -15,13 +26,261 @@ body{
     min-height: 200vh;
 }
 
+/* HEADER */
+
+.wrapper{
+    background: var(--first-color);
+    position: fixed;
+    width: 100%;
+}
+.wrapper nav{
+    position: relative;
+    display: flex;
+    max-width: calc(100% - 50px);
+    margin: 0 auto;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .nav-content{
+    display: flex;
+    align-items: center;
+}
+nav .nav-content .links{
+    margin-left: 80px;
+    display: flex;
+}
+.nav-content .logo a{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+}
+.nav-content .links li{
+    list-style: none;
+    line-height: 70px;
+}
+.nav-content .links li a,
+.nav-content .links li label{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 9px 17px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.nav-content .links li label{
+    display: none;
+}
+.nav-content .links li a:hover,
+.nav-content .links li label:hover{
+    background: var(--third-color);
+}
+.wrapper .search-icon,
+.wrapper .menu-icon{
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    line-height: 70px;
+    width: 70px;
+    text-align: center;
+}
+.wrapper .menu-icon{
+    display: none;
+}
+.wrapper #show-search:checked ~ .search-icon i::before{
+    content: "\f00d";
+}
+
+.wrapper .search-box{
+    position: absolute;
+    height: 100%;
+    max-width: calc(100% - 50px);
+    width: 80%;
+    left: 100px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.wrapper #show-search:checked ~ .search-box{
+    opacity: 1;
+    pointer-events: auto;
+}
+.search-box input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    color: #fff;
+    background: var(--first-color);
+    padding: 0 100px 0 15px;
+}
+.search-box input::placeholder{
+    color: #f2f2f2;
+}
+.search-box .go-icon{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 60px;
+    width: 70px;
+    background: var(--first-color)4;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+.wrapper input[type="checkbox"]{
+    display: none;
+}
+
+/* Dropdown Menu code start */
+.nav-content .links ul{
+    position: absolute;
+    background: var(--first-color);
+    top: 80px;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+}
+.nav-content .links li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+}
+.nav-content .links ul li a{
+    display: block;
+    width: 100%;
+    line-height: 30px;
+    border-radius: 0px!important;
+}
+.nav-content .links ul ul{
+    position: absolute;
+    top: 0;
+    right: calc(-100% + 8px);
+}
+.nav-content .links ul li{
+    position: relative;
+}
+.nav-content .links ul li:hover ul{
+    top: 0;
+}
+
+/* Responsive code start */
+@media screen and (max-width: 1250px){
+    .wrapper nav{
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    nav .nav-content .links{
+        margin-left: 30px;
+    }
+    .nav-content .links li a{
+        padding: 8px 13px;
+    }
+    .wrapper .search-box{
+        max-width: calc(100% - 100px);
+    }
+    .wrapper .search-box input{
+        padding: 0 100px 0 15px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .wrapper .search-box{
+        width: 60%;
+    }
+    .wrapper .menu-icon{
+        display: block;
+    }
+    .wrapper #show-menu:checked ~ .menu-icon i::before{
+        content: "\f00d";
+    }
+    nav .nav-content .links{
+        display: block;
+        position: fixed;
+        background: var(--second-color);
+        height: 100%;
+        width: 100%;
+        top: 70px;
+        left: -100%;
+        margin-left: 0;
+        max-width: 350px;
+        overflow-y: auto;
+        padding-bottom: 100px;
+        transition: all 0.3s ease;
+    }
+    nav #show-menu:checked ~ .nav-content .links{
+        left: 0%;
+    }
+    .nav-content .links li{
+        margin: 15px 20px;
+    }
+    .nav-content .links li a,
+    .nav-content .links li label{
+        line-height: 40px;
+        font-size: 20px;
+        display: block;
+        padding: 8px 18px;
+        cursor: pointer;
+    }
+    .nav-content .links li a.desktop-link{
+        display: none;
+    }
+
+    /* dropdown responsive code start */
+    .nav-content .links ul,
+    .nav-content .links ul ul{
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        background: none;
+        max-height: 0px;
+        overflow: hidden;
+    }
+    .nav-content .links #show-features:checked ~ ul,
+    .nav-content .links #show-services:checked ~ ul,
+    .nav-content .links #show-items:checked ~ ul{
+        max-height: 100vh;
+    }
+    .nav-content .links ul li{
+        margin: 7px 20px;
+    }
+    .nav-content .links ul li a{
+        font-size: 18px;
+        line-height: 30px;
+        border-radius: 5px!important;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .wrapper nav{
+        padding: 0 10px;
+    }
+    .nav-content .logo a{
+        font-size: 27px;
+    }
+    .wrapper .search-box{
+        width: 50%;
+    }
+    .wrapper .search-box .go-icon{
+        width: 30px;
+        right: 0;
+    }
+    .wrapper .search-box input{
+        padding-right: 30px;
+    }
+}
 
 /* UP */
 
 #up{
     position: fixed;
     z-index: 1001;
-    bottom: -30%; 
+    bottom: 60rem; 
     right: 5rem;
     height: 30rem;
     width: 6rem;
@@ -29,7 +288,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.4s;
+    transition: 3s;
 }
 
 #up.visible{
