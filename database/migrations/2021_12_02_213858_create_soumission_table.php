@@ -18,6 +18,11 @@ class CreateSoumissionTable extends Migration
             $table->string("description");
             //$table->timestamps();
         });
+
+        Schema::update('soumission', function (Blueprint $table) {
+            $table->foreignId("email_user")->nullable()->references('users')->on('email');
+        });
+        
     }
 
     /**
