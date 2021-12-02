@@ -28,7 +28,7 @@ body{
 .wrapper nav{
     position: relative;
     display: flex;
-    max-width: calc(100% - 50px);
+    max-width: calc(100% - 150px);
     margin: 0 auto;
     height: 70px;
     align-items: center;
