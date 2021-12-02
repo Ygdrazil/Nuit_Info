@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
 
         <!-- Scripts -->
-        <script src="{{ asset('js/welcome.js') }}"></script>
+        <script src="{{ assets('js/welcome.js') }}"></script>
 
         <!-- Libs -->
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
