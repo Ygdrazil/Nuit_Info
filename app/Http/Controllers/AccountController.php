@@ -32,7 +32,9 @@ class AccountController extends Controller
 
     function register(Request $request) {
         $request->validate([
+            'username' => ['required'],
             'name' => ['required'],
+            'surname' => ['required'],
             'email' => ['required'],
             'password' => ['required', Rules\Password::defaults()]
         ]);
@@ -50,7 +52,9 @@ class AccountController extends Controller
         };
 
 		$new_user = User::create([
+			'username' => $request->input('username'),
 			'name' => $request->input('name'),
+			'surname' => $request->input('surname'),
 			'email' => $request->input('email'),
 			'password' => \Hash::make($request->input('password'))
 		]);
