@@ -23,9 +23,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-#footer .social_icon{
+#footer .social_icon,
+#footer .menu{
     position: relative;
     display: flex;
     justify-content: center;

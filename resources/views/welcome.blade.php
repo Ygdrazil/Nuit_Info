@@ -25,6 +25,14 @@
                 <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
                 <li><a href="#"><ion-icon name="mail-outline"></ion-icon></a></li>
             </ul>
+            <ul class="menu">
+                <li><a href="#">Qui sommes-nous</a></li>
+                <li><a href="#">Presse</a></li>
+                <li><a href="#">Sites amis</a></li>
+                <li><a href="#">Plan du site</a></li>
+                <li><a href="#">Lettres hebdomadaires</a></li>
+                <li><a href="#">Exprimez-vous</a></li>
+            </ul>
         </footer>
     </body>
 </html>
