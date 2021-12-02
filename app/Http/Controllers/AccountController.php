@@ -22,7 +22,7 @@ class AccountController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             
-            return redirect(route('home'));
+            return redirect(route('welcome'));
         }
 
         return back()->withErrors([
@@ -57,6 +57,6 @@ class AccountController extends Controller
 		event(new Registered($new_user));
 
 		\Auth::login($new_user);
-        return redirect(route('home'));
+        return redirect(route('welcome'));
 	}
 }
