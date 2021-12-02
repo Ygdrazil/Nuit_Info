@@ -21,7 +21,7 @@ body{
 #up{
     position: fixed;
     z-index: 1001;
-    bottom: -20%; 
+    bottom: -30%; 
     right: 5rem;
     height: 30rem;
     width: 6rem;
@@ -29,6 +29,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.4s;
 }
 
 #up.visible{
