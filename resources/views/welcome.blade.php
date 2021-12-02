@@ -14,7 +14,7 @@
 
 		<!-- MAIN -->
 		@extends('layouts.main')
-		@section('main')
+		@section('content')
 		
 		here
 
