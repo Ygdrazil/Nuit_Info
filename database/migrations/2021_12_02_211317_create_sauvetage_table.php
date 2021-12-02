@@ -24,18 +24,6 @@ class CreateSauvetageTable extends Migration
             $table->time('duree')->nullable();
             $table->integer('nb_equipage_sauve')->nullable();
             //$table->timestamps();
-
-            Schema::update('bateau_sauvetage', function (Blueprint $table) {
-                $table->foreignId("id_sauvetage")->references('id_sauvetage')->on('sauvetage');
-            });
-
-            Schema::update('soumission', function (Blueprint $table) {
-                $table->foreignId("id_sauvetage")->references('id_sauvetage')->on('sauvetage')->nullable();
-            });
-
-            Schema::update('participant', function (Blueprint $table) {
-                $table->foreignId("id_sauvetage")->references('id_sauvetage')->on('sauvetage');
-            });
         });
     }
 

@@ -20,19 +20,6 @@ class CreateBateauTable extends Migration
             $table->text("description");
             //$table->timestamps();
         });
-
-        Schema::update('bateau_sauvetage', function (Blueprint $table) {
-            $table->foreignId("id_bateau")->references('id_bateau')->on('bateau');
-        });
-
-        Schema::update('info_bateau', function (Blueprint $table) {
-            $table->foreignId("id_bateau")->references('id_bateau')->on('bateau');
-        });
-
-        Schema::update('soumission', function (Blueprint $table) {
-            $table->foreignId("id_bateau")->references('id_bateau')->on('bateau')->nullable();
-        });
-
     }
 
     /**

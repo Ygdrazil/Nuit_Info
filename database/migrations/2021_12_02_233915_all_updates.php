@@ -13,7 +13,45 @@ class AllUpdates extends Migration
      */
     public function up()
     {
-        //
+        Schema::update('bateau_sauvetage', function (Blueprint $table) {
+            $table->foreignId("id_bateau")->references('id_bateau')->on('bateau');
+        });
+
+        Schema::update('info_bateau', function (Blueprint $table) {
+            $table->foreignId("id_bateau")->references('id_bateau')->on('bateau');
+        });
+
+        Schema::update('soumission', function (Blueprint $table) {
+            $table->foreignId("id_bateau")->references('id_bateau')->on('bateau')->nullable();
+        });
+
+		Schema::update('bateau_sauvetage', function (Blueprint $table) {
+			$table->foreignId("id_sauvetage")->references('id_sauvetage')->on('sauvetage');
+		});
+
+		Schema::update('participant', function (Blueprint $table) {
+			$table->foreignId("id_sauvetage")->references('id_sauvetage')->on('sauvetage');
+		});
+
+		Schema::update('participant', function (Blueprint $table) {
+			$table->foreignId("id_sauveteur")->references('id_sauveteur')->on('sauveteur')->nullable();
+		});
+
+		Schema::update('poste', function (Blueprint $table) {
+			$table->foreignId("id_sauveteur")->references('id_sauveteur')->on('sauveteur');
+		});
+
+		Schema::update('soumission', function (Blueprint $table) {
+			$table->foreignId("id_sauveteur")->references('id_sauveteur')->on('sauveteur')->nullable();
+		});
+
+		Schema::update('soumission', function (Blueprint $table) {
+            $table->foreignId("email_user")->nullable()->references('users')->on('email');
+        });
+
+		Schema::update('soumission', function (Blueprint $table) {
+			$table->foreignId("id_sauvetage")->references('id_sauvetage')->on('sauvetage')->nullable();
+		});
     }
 
     /**
