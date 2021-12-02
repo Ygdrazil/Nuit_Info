@@ -2,7 +2,10 @@
 
 namespace App\Models;
 
-class Sauveteur extends Models
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Sauveteur extends Model
 {
     use HasFactory;
      /**
