@@ -14,7 +14,7 @@ class AllUpdates extends Migration
     public function up()
     {
         Schema::update('bateau_sauvetage', function (Blueprint $table) {
-            $table->foreignId("id_bateau")->references('id_bateau')->on('bateau');
+            $table->foreignId("id_bateau")->references('id_bateau')->on('bateau')->onUpdate('restrict')->onDelete('restrict');
         });
 
         Schema::update('info_bateau', function (Blueprint $table) {

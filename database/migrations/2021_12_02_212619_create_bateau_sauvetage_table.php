@@ -15,7 +15,7 @@ class CreateBateauSauvetageTable extends Migration
     {
         Schema::create('bateau_sauvetage', function (Blueprint $table) {
             $table->id("id_bateau_sauvetage");
-            $table->integer("id_bateau");
+			$table->unsignedInteger('id_bateau')->nullable();
             //$table->timestamps();
         });
     }
