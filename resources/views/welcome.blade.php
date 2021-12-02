@@ -12,6 +12,10 @@
         <!-- Scripts -->
         <script src="{{ asset('js/welcome.js') }}"></script>
 
+        <!-- Libs -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
     </head>
     <body>
         <header id="header">
@@ -23,7 +27,12 @@
         </section>
 
         <footer id="footer">
-            Je suis le footer
+            <ul class="social_icon">
+                <li><a href="#"><ion-icon name="home-outline"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="mail-outline"></ion-icon></a></li>
+            </ul>
         </footer>
     </body>
 </html>
