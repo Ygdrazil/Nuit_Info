@@ -5,7 +5,7 @@
     <body>
         @include('layouts.header')
         @include('layouts.head')
-        <form  action="{{ route('createSauveteur') }}" method="POST">
+        <form  action="{{ route('createSauveteur.post') }}" method="POST">
             @csrf
             <input type="text" name="nom" placeholder="Nom">
             <input type="text" name="prenom" placeholder="Prenom">
