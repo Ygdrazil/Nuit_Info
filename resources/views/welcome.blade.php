@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Bateau</title>
+        <title>Accueil ⋆ Sauveteurs du dunkerquois</title>
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/misc.css') }}">
