@@ -5,6 +5,23 @@
     </head>
     <body>
 		@include('layouts.header')
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
        @foreach ($sauveteurs as $sauveteur)
        <p>
         {{$sauveteur->nom}}
