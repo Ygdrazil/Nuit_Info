@@ -68,6 +68,7 @@ body{
 #up .rocket img{
     height: 5em;
     width: auto;
+    cursor: pointer;
 }
 
 
