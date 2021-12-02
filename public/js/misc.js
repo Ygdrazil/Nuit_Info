@@ -1,3 +1,22 @@
 window.addEventListener("DOMContentLoaded", _ => {
-    console.log("DOM entièrement chargé et analysé");
-  });
+    
+    // Attributes
+
+
+
+
+    // Functions Calls
+
+
+
+
+    // Events
+
+    document.querySelector('.img_rocket').addEventListener('click', _ =>{
+        console.log('monte');
+    });
+
+
+});
+
+// Functions
