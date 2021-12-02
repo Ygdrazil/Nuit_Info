@@ -19,6 +19,12 @@
     </head>
     <body>
         <footer id="footer">
+            <div class="waves">
+                <div id="wave1" class="wave"></div>
+                <div id="wave2" class="wave"></div>
+                <div id="wave3" class="wave"></div>
+                <div id="wave4" class="wave"></div>
+            </div>
             <ul class="social_icon">
                 <li><a href="#"><ion-icon name="home-outline"></ion-icon></a></li>
                 <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
@@ -33,6 +39,7 @@
                 <li><a href="#">Lettres hebdomadaires</a></li>
                 <li><a href="#">Exprimez-vous</a></li>
             </ul>
+            <p>©2021 - LeHessCrew | Tous droits réservés</p>
         </footer>
     </body>
 </html>
