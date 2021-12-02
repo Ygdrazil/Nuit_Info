@@ -60,7 +60,7 @@ body{
     width: 10px;
     height: 200px;
     background: linear-gradient(#FF1A1A, transparent);
-    filter: blur(5px);
+    filter: blur(20px);
 }
 
 #up .rocket img{
