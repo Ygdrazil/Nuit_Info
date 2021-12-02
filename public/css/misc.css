@@ -64,8 +64,8 @@ body{
 }
 
 #up .rocket img{
-    width: 5em;
-    height: 6em;
+    height: 5em;
+    width: auto;
 }
 
 
