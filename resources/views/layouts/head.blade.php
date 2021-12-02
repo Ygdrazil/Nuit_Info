@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<titlD>Sauveteurs du Dunkerquois</title>
+<title>Sauveteurs du Dunkerquois</title>
 
 <!-- STYLES -->
 <link rel="icon" href="{{ asset('pictures/boat.png') }}" />
