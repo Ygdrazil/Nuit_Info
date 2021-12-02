@@ -17,9 +17,10 @@ body{
 #up{
     position: fixed;
     z-index: 1001;
-    bottom: 3rem;
+    bottom: -5rem;
     right: 5rem;
-    height: 10rem;
+    height: 30rem;
+    width: 6rem;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -44,11 +45,11 @@ body{
 #up .rocket::before{
     content: '';
     position: absolute;
-    bottom: -200px;
+    bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
     width: 10px;
-    height: 200px;
+    height: 50px;
     background: linear-gradient(#FF1A1A, transparent);
 }
 
