@@ -151,7 +151,7 @@ nav .nav-content .links{
 .nav-content .links ul ul{
     position: absolute;
     top: 0;
-    right: calc(-100% + 8px);
+    right: calc(-100% + 15px);
 }
 .nav-content .links ul li{
     position: relative;
