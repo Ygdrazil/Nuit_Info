@@ -4,7 +4,8 @@
 		@include('layouts.head')
         <!-- Styles -->
 
-        <!-- Scripts -->
+        <!-- SCRIPTS -->
+        <script src="{{ asset('js/easter.js') }}"></script>
 
         <!-- Libs -->
     </head>
