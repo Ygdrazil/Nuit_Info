@@ -16,6 +16,7 @@ body{
 
 .scene{
     position: fixed;
+    z-index: 1001;
     background-color: red;
     bottom: 10%;
     right: 10%;
