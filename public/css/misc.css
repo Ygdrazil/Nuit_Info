@@ -36,7 +36,8 @@ body{
     flex-wrap: wrap;
 }
 
-#footer .social_icon li{
+#footer .social_icon li,
+#footer .menu li{
     list-style: none;
 }
 
@@ -46,6 +47,19 @@ body{
     margin: 0 10px;
     display: inline-block;
     transition: 0.5s;
+}
+
+#footer .menu li a{
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+#footer .menu li a:hover{
+    opacity: 1;
 }
 
 #footer .social_icon li a:hover{
