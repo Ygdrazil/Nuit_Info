@@ -1,7 +1,7 @@
 <!-- ROCKET -->
 <div id="up">
 	<div class="rocket">
-		<img class="img_rocket" src="{{ asset('pictures/rocket.png') }}">
+		<img class="img_rocket" src="{{ asset('pictures/rocket1.png') }}">
 	</div>
 </div>
 
