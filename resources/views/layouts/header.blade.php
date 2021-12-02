@@ -8,7 +8,7 @@
     <div class="logo"><a href="#"><img src="https://testlehesscrew.weiha.online/pictures/boat.png"></a></div>
         <ul class="links">
             <li>
-                <a href="#" class="desktop-link">Bateau</a>
+                <a href="." class="desktop-link">Bateau</a>
                 <input type="checkbox" id="show-services">
                 <label for="show-services">Bateau</label>
                 <ul>
