@@ -22,7 +22,7 @@
 
 
         <!-- UP -->
-        <div class="scene">
+        <div id="up">
             <div class="rocket">
                 <img src="{{ asset('pictures/rocket.png') }}">
             </div>

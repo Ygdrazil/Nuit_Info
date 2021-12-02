@@ -14,12 +14,53 @@ body{
 
 /* UP */
 
-.scene{
+#up{
     position: fixed;
     z-index: 1001;
-    background-color: red;
     bottom: 5rem;
-    right: 4rem;
+    right: 5rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#up .rocket{
+    position: relative;
+    animation: animate 0.2s ease infinite;
+}
+
+@keyframes animate{
+    0%,
+    100%{
+        transform: translateY(-2px);
+    }
+    50%{
+        transform: translateY(2px);
+    }
+}
+
+#up .rocket::before{
+    content: '';
+    position: absolute;
+    bottom: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 200px;
+    background: linear-gradient(#FF1A1A, transparent);
+}
+
+#up .rocket::after{
+    content: '';
+    position: absolute;
+    bottom: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 200px;
+    background: linear-gradient(#FF1A1A, transparent);
+    filter: blur(5px);
 }
 
 
