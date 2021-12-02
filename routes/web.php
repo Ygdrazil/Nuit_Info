@@ -21,3 +21,7 @@ Route::post('/login', 'App\Http\Controllers\AccountController@login')->middlewar
 Route::get('/register', function () { return view('auth.register'); })->middleware(['guest'])->name('register');
 Route::post('/register', 'App\Http\Controllers\AccountController@register')->middleware(['guest'])->name('register.post');
 Route::any('/logout', 'App\Http\Controllers\AccountController@logout')->middleware(['auth'])->name('logout');
+
+// Creation sauveteur
+Route::post('/createSauveteur', 'App\Http\Controllers\SauveteurController@create')->middleware(['auth'])->name('createSauveteur');
+Route::get('/afficheSauveteur', 'App\Http\Controllers\SauveteurController@findAll')->name('afficheSauveteur');

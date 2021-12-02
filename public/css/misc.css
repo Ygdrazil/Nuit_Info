@@ -42,10 +42,9 @@ nav .nav-content .links{
     margin-left: 80px;
     display: flex;
 }
-.nav-content .logo a{
-    color: #fff;
-    font-size: 30px;
-    font-weight: 600;
+.nav-content .logo a img{
+    height: 30px;
+    width: auto;
 }
 .nav-content .links li{
     list-style: none;
