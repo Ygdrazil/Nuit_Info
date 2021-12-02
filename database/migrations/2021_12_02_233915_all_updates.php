@@ -34,7 +34,7 @@ class AllUpdates extends Migration
 		Schema::table('soumission', function (Blueprint $table) {
 			$table->foreignId("id_bateau")->references('id_bateau')->on('bateau')->nullable();
 			$table->foreignId("id_sauveteur")->references('id_sauveteur')->on('sauveteur')->nullable();
-			$table->foreignId("email_user")->references('users')->on('email')->nullable();
+			$table->foreignId("id_user")->references('id')->on('users');
 			$table->foreignId("id_sauvetage")->references('id_sauvetage')->on('sauvetage')->nullable();
 		});
     }
