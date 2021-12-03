@@ -21,10 +21,10 @@
       <br>
       <p>La citation ci-dessous, signée Arsène Bossu, à un journaliste du Grand Echo du Nord de la France en 1932, résume à elle seule l’état d’esprit des sauveteurs du Dunkerquois.</p>
       <br>
-      <img src="{{ asset('pictures/citation.png') }}">
-      <div>
-        <div><img src="{{ asset('pictures/journal.png') }}"></div>
-        <div><img src="{{ asset('pictures/semaine.png') }}"></div>
+      <img class="citation" src="{{ asset('pictures/citation.png') }}">
+      <div class="box_pictures">
+        <div><img class="picture1" src="{{ asset('pictures/journal.png') }}"></div>
+        <div><img class="picture2" src="{{ asset('pictures/semaine.png') }}"></div>
       </div>
     </section>
 
