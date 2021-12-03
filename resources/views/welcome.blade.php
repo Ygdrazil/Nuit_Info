@@ -3,6 +3,7 @@
     <head>
 		@include('layouts.head')
         <!-- Styles -->
+        <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 
         <!-- Scripts -->
         <script src="{{ asset('js/easter.js') }}"></script>
