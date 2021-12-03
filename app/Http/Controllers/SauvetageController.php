@@ -52,7 +52,7 @@ class SauvetageController extends Controller
 		$max = $min + $interval;
 
 		foreach ($sauvetages as $sauvetage) {
-			recursive($interval, $min, $max, $sauvetage);
+			$this->recursive($interval, $min, $max, $sauvetage);
 		};
 
 		dd($res);
@@ -69,7 +69,7 @@ class SauvetageController extends Controller
 			$min = $max;
 			$max += $interval;
 
-			recursive($interval, $min, $max, $sauvetage);
+			$this->recursive($interval, $min, $max, $sauvetage);
 		};
 	}
 
