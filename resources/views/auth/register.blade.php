@@ -28,6 +28,7 @@
 			<h2>Créer un compte</h2>
 		</div>
 		<form action="{{ route('register.post') }}" method="post" id="form" class="form">
+			@csrf
 			<div class="form_input">
 				<input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="Email" />
 			</div>
