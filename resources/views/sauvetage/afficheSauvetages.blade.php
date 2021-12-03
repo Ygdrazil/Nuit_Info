@@ -4,6 +4,7 @@
 		@include('layouts.head')
 
 		<!-- Styles -->
+		<link rel="stylesheet" href="{{ asset('css/utilitaires.css') }}">
 
 		<!-- Scripts -->
 
@@ -16,13 +17,15 @@
 
 		<!-- MAIN -->
 		<section id="main">
-			<h1>La liste des Sauvetages</h1>
-			@foreach($intervals as $year => $sauvetages)
-				<h1>{{ $year }} à {{ $year + $interval }}</h1>
-				@foreach($sauvetages as $sauvetage)
-					<h2><a href="{{ route('sauvetage', $sauvetage->id_sauvetage) }}">{{ $sauvetage->titre }}</a></h2>
+			<h1>La liste des Sauvetages :</h1>
+			<div class="box">
+				@foreach($intervals as $year => $sauvetages)
+					<h1>{{ $year }} à {{ $year + $interval }}</h1>
+					@foreach($sauvetages as $sauvetage)
+						<h2><a href="{{ route('sauvetage', $sauvetage->id_sauvetage) }}">{{ $sauvetage->titre }}</a></h2>
+					@endforeach
 				@endforeach
-			@endforeach
+			</div>
 		</section>
 
 		<!-- FOOTER -->
