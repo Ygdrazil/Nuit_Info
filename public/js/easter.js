@@ -73,7 +73,7 @@ window.addEventListener("DOMContentLoaded", _ => {
                 let b2 = y2 + h2;
                 let r2 = x2 + w2;
 
-                if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2)
+                if (r1 >= x2 && x2 <= r2 && h1 >= y2 && y1 <= h2)
                     console.log('oui')
             }
         }, false);
