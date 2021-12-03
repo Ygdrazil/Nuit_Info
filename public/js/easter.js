@@ -1,1 +1,2 @@
-console.log("hello")
+logo = document.querySelectorAll('.logo')
+logo.removeAttribute("href")
