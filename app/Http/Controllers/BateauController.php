@@ -12,19 +12,13 @@ class BateauController extends Controller
 		$request->validate([
 			'nom' => 'required',
 			'annee_debut' => 'required',
-			'dateNaissance' => 'nullable',
-			'dateMort' => 'nullable',
 			'description' => 'required',
-			'source' => 'required',
 		]);
 
         $bateau = new Bateau();
         $bateau->nom = $request->nom;
-        $bateau->prenom = $request->prenom;
-        $bateau->naissance = $request->dateNaissance;
-        $bateau->mort = $request->dateMort;
+        $bateau->annee_debut = $request->annee_debut;
         $bateau->description = $request->description;
-        $bateau->source = $request->source;
         $bateau->save();
 
         return redirect(route('bateau.nouveau'));
@@ -47,6 +41,6 @@ class BateauController extends Controller
 	function findOne($bateau_id)
 	{
 		$bateau = Bateau::findOrFail($bateau_id);
-		return view('bateau.afficheBateaux', compact('bateau'));
+		return view('bateau.afficheBateau', compact('bateau'));
 	}
 }

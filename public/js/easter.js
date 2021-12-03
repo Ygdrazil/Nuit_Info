@@ -13,11 +13,11 @@ window.addEventListener("DOMContentLoaded", _ => {
 
     var img = document.createElement('img');
     img.src = 'pictures/phare.png';
-    contentPhare = document.querySelectorAll('.wrapper')[0];
+    contentPhare = document.querySelectorAll('.nav-content')[0];
     img.style.height = '30px'
     img.style.width = 'auto'
-    img.style.marginTop = '-55px'
-    img.style.markerLeft = (vw - 150) + "px"
+    img.style.top = '55px'
+    img.style.left = '55px'
     img.style.position = 'absolute'
     contentPhare.appendChild(img)
 

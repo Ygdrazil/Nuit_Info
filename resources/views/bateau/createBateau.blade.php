@@ -17,7 +17,7 @@
         <!-- MAIN -->
         <section id="main">
             
-            <form action="{{ route('bateau.nouveau.post') }}" method="POST">
+            <form action="{{ route('bateau.nouveau.post') }}" method="post">
                 @csrf
                 <input type="text" name="nom" placeholder="Nom" value="{{ old('nom') }}" />
                 <input type="date" name="annee_debut" value="{{ old('annee_debut') }}" />
@@ -30,5 +30,3 @@
     	@include('layouts.footer')
     </body>
 </html>
-
-
