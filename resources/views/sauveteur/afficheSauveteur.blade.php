@@ -16,7 +16,14 @@
 
 		<!-- MAIN -->
 		<section id="main">
-			<p>Salut mec test</p>
+			@foreach($alphas as $alpha => $sauveteurs)
+				<h1>{{ $alpha }}</h1>
+				<ul>
+				@foreach($sauveteurs as $sauveteur)
+					<li>@JSON($sauveteur)</li>
+				@endforeach
+				</ul>
+			@endforeach
 		</section>
 
 		<!-- FOOTER -->
