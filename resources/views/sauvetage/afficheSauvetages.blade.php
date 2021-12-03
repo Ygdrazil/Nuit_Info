@@ -11,17 +11,12 @@
 
     </head>
     <body>
-		@php
-		dd($intervals)
-		@endphp
 		<!-- HEADER -->
 		@include('layouts.header')
 
 		<!-- MAIN -->
 		<section id="main">
-			@foreach($intervals as $year => $sauvetages)
-				<h1>{{ $year }}</h1>
-			@foreach
+			@JSON($intervals)
 		</section>
 
 		<!-- FOOTER -->
