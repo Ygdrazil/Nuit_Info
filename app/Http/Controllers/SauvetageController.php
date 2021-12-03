@@ -58,14 +58,12 @@ class SauvetageController extends Controller
 			} else {
 				$min = $y - $y%$interval;
 				$max = $min + $interval;
-				
+
 				$res[$min][] = $sauvetage;
 			};
 		};
 
-		dd($res);
-
-        return view('sauvetage.afficheSauvetages', compact('sauvetages'));
+        return view('sauvetage.afficheSauvetages', ['sauvetages' => $res]);
     }
 
 	function findOne($sauvetage_id)
