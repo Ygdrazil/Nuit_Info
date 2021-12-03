@@ -17,6 +17,14 @@
 		<!-- MAIN -->
 		<section id="main">
 			@JSON($sauvetage)
+			<h1>{{$sauvetage->titre}}</h1>
+			<h2>{{$sauvegarde->date_sauvetage}}</h2>
+			<h3>Nombre de personnes sauvées : {{$sauvegarde->nb_sauve}}</h3>
+			<h3>Nombre d'équipage sauvé : {{$sauvegarde->nb_equipage_sauve}}</h3>
+			<h3>Durée : {{$sauvegarde->duree}}</h3>
+			<p>{{$sauvetage->description}}</p>
+			<p>{{$sauvegarde->source}}</p>
+
 			@auth
 				<form action="{{ route('soumission.nouvelle.post') }}" method="post">
 					@csrf
