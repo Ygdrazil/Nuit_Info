@@ -7,6 +7,7 @@
 	<title>Sauveteurs du Dunkerquois</title>
 
 	<!-- STYLES -->
+	<link rel="icon" href="{{ asset('pictures/boat.png') }}" />
 	<link rel="stylesheet" href="{{ asset('css/entry.css') }}">
 
 	<!-- SCRIPTS -->

@@ -7,6 +7,7 @@
 	<title>Sauveteurs du Dunkerquois</title>
 
 	<!-- STYLES -->
+	<link rel="icon" href="{{ asset('pictures/boat.png') }}" />
 	<link rel="stylesheet" href="{{ asset('css/entry.css') }}">
 
 	<!-- SCRIPTS -->
@@ -22,96 +23,55 @@
 		@endforeach
 		</ul>
 	@endif
-	<div class="entry">
-		<form action="{{ route('register.post') }}" method="post">
-			@csrf
-
-			<input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="Email" />
-			<input type="text" name="username" id="username" value="{{ old('username') }}" placeholder="Nom d'utilisateur" />
-			<input type="text" name="name" id="name" value="{{ old('name') }}" placeholder="Prénom" />
-			<input type="text" name="surname" id="surname" value="{{ old('surname') }}" placeholder="Nom de famille" />
-
-			<input type="password" name="password" id="password" value="{{ old('password') }}" placeholder="Mot de passe" />
-			<input type="password" name="confirm_password" id="confirm_password" value="{{ old('confirm_password') }}" placeholder="Confirmer le mot de passe" />
-
-			<button type="submit">S'enregistrer</button>
-		</form>
-	</div>
 	<div class="container">
-
-<!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
-
-	<div class="header">
-		<h2>Create Account</h2>
-	</div>
-		<form id="form" class="form">
+		<div class="header">
+			<h2>Create Account</h2>
+		</div>
+		<form action="{{ route('register.post') }}" method="post" id="form" class="form">
 			<div class="form-control">
-				<label for="username">Username</label>
-				<input type="text" placeholder="florinpop17" id="username" />
+				<label for="email">Email</label>
+				<input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="email@exemple.com" />
 				<i class="fas fa-check-circle"></i>
 				<i class="fas fa-exclamation-circle"></i>
 				<small>Error message</small>
 			</div>
 			<div class="form-control">
-				<label for="username">Email</label>
-				<input type="email" placeholder="a@florin-pop.com" id="email" />
+				<label for="username">Nom d'utilisateur</label>
+				<input type="text" name="username" id="username" value="{{ old('username') }}" placeholder="Nom d'utilisateur" />
 				<i class="fas fa-check-circle"></i>
 				<i class="fas fa-exclamation-circle"></i>
 				<small>Error message</small>
 			</div>
 			<div class="form-control">
-				<label for="username">Password</label>
-				<input type="password" placeholder="Password" id="password"/>
+				<label for="name">Prénom</label>
+				<input type="text" name="name" id="name" value="{{ old('name') }}" placeholder="Prénom" />
 				<i class="fas fa-check-circle"></i>
 				<i class="fas fa-exclamation-circle"></i>
 				<small>Error message</small>
 			</div>
 			<div class="form-control">
-				<label for="username">Password check</label>
-				<input type="password" placeholder="Password two" id="password2"/>
+				<label for="surname">Nom</label>
+				<input type="text" name="surname" id="surname" value="{{ old('surname') }}" placeholder="Nom de famille" />
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+			</div>		
+			<div class="form-control">
+				<label for="password">Mot de passe</label>
+				<input type="password" name="password" id="password" value="{{ old('password') }}" placeholder="Mot de passe" />
 				<i class="fas fa-check-circle"></i>
 				<i class="fas fa-exclamation-circle"></i>
 				<small>Error message</small>
 			</div>
-			<button>Submit</button>
+			<div class="form-control">
+				<label for="confirm_password">Password check</label>
+				<input type="password" name="confirm_password" id="confirm_password" value="{{ old('confirm_password') }}" placeholder="Confirmer le mot de passe" />
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+			</div>
+			<button type="submit">S'enregistrer</button>
 		</form>
 	</div>
 </body>
 </html>
-
-<div class="container">
-	<div class="header">
-		<h2>Create Account</h2>
-	</div>
-	<form id="form" class="form">
-		<div class="form-control">
-			<label for="username">Username</label>
-			<input type="text" placeholder="florinpop17" id="username" />
-			<i class="fas fa-check-circle"></i>
-			<i class="fas fa-exclamation-circle"></i>
-			<small>Error message</small>
-		</div>
-		<div class="form-control">
-			<label for="username">Email</label>
-			<input type="email" placeholder="a@florin-pop.com" id="email" />
-			<i class="fas fa-check-circle"></i>
-			<i class="fas fa-exclamation-circle"></i>
-			<small>Error message</small>
-		</div>
-		<div class="form-control">
-			<label for="username">Password</label>
-			<input type="password" placeholder="Password" id="password"/>
-			<i class="fas fa-check-circle"></i>
-			<i class="fas fa-exclamation-circle"></i>
-			<small>Error message</small>
-		</div>
-		<div class="form-control">
-			<label for="username">Password check</label>
-			<input type="password" placeholder="Password two" id="password2"/>
-			<i class="fas fa-check-circle"></i>
-			<i class="fas fa-exclamation-circle"></i>
-			<small>Error message</small>
-		</div>
-		<button>Submit</button>
-	</form>
-</div>
