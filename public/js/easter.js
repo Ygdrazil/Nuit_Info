@@ -8,10 +8,18 @@ window.addEventListener("DOMContentLoaded", _ => {
     logo.style.position = 'absolute'
     contentLogo.appendChild(logo)
 
-    var click =0
-    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
-    console.log(vw)
+    var img = document.createElement('img');
+    img.src = 'pictures/phare.png';
+    contentPhare = document.querySelectorAll('.wrapper')[0];
+    img.style.height = '30px'
+    img.style.width = 'auto'
+    img.style.marginTop = '-20px'
+    img.style.position = 'absolute'
+    contentPhare.appendChild(img)
+
+    var click = 0
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0) - 60
+    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0) - 60
     var notStart = true
 
     logo.addEventListener("click", (event) => {
@@ -22,8 +30,8 @@ window.addEventListener("DOMContentLoaded", _ => {
         var keyName = event.key;
         if(click >= 3){
             if(notStart){
-                logo.style.top = 40 + 'px'
-                logo.style.left = 30 + 'px'
+                logo.style.top = 35 + 'px'
+                logo.style.left = 25 + 'px'
                 notStart = false
             }
             if(parseInt(logo.style.top) <= vh){
