@@ -62,10 +62,10 @@ window.addEventListener("DOMContentLoaded", _ => {
                 }
                 let x1 = parseInt(logo.style.left)
                 let y1 = parseInt(logo.style.top)
-                let h1 = logo.offsetHeight
-                let w1 = logo.offsetWidth
-                let b1 = y1 + h1;
-                let r1 = x1 + w1;
+                let h1 = logo.offsetHeight + 10
+                let w1 = logo.offsetWidth + 10
+                let b1 = y1 + h1
+                let r1 = x1 + w1
                 let x2 = parseInt(img.style.left)
                 let y2 = parseInt(img.style.top)
                 let h2 = img.offsetHeight
@@ -73,7 +73,7 @@ window.addEventListener("DOMContentLoaded", _ => {
                 let b2 = y2 + h2;
                 let r2 = x2 + w2;
 
-                if (r1 >= x2 && x2 <= r2 && h1 >= y2 && y1 <= h2)
+                if (r1 >= x2 || x2 <= r2 || h1 >= y2 || y1 <= h2)
                     console.log('oui')
             }
         }, false);
