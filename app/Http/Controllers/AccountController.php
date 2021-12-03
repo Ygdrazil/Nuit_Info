@@ -73,6 +73,8 @@ class AccountController extends Controller
 
 	function edit(Request $request)
 	{
+		dd($request);
+		
 		$request->validate([
 			'username' => 'required',
 			'name' => 'required',
