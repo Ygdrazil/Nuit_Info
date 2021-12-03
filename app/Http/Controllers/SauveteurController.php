@@ -17,7 +17,8 @@ class SauveteurController extends Controller
         $sauveteur->description = $request->description;
         $sauveteur->source = $request->source;
         $sauveteur->save();
-        return redirect('/');
+
+        return redirect(route('sauveteurs'));
     }
 
     public function update(Request $request)
@@ -30,7 +31,8 @@ class SauveteurController extends Controller
         $sauveteur->description = $request->description;
         $sauveteur->source = $request->source;
         $sauveteur->save();
-        return redirect('/');
+        
+		return redirect(route('sauveteurs'));
     }
 
     public function findAll()
