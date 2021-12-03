@@ -8,7 +8,7 @@
     <div class="logo"><a href="."><img src="https://testlehesscrew.weiha.online/pictures/boat.png"></a></div>
         <ul class="links">
             <li>
-                <a href="{{ route('bateaux') }}" class="desktop-link">Bateaux</a>
+                <a href="{{ route('bateaux') }}" class="{{ (request()->is('bateaux') == 1) ? 'active_link' : '' }}">Bateaux</a>
                 <!-- <input type="checkbox" id="show-services">
                 <label for="show-services">Bateau</label>
                 <ul>
