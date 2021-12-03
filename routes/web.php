@@ -26,7 +26,7 @@ Route::any('/logout', 'App\Http\Controllers\AccountController@logout')->middlewa
 Route::post('/sauveteur/nouveau', 'App\Http\Controllers\SauveteurController@create')->middleware(['auth'])->name('sauveteur.nouveau.post');
 Route::get('/sauveteur/nouveau', function () { return view('sauveteur.createSauveteur'); })->middleware(['auth'])->name('sauveteur.nouveau');
 
-Route::get('/sauveteur/{sauveteur_id}', 'App\Http\Controllers\SauveteurController@fineOne')->name('sauveteurs');
+Route::get('/sauveteur/{sauveteur_id}', 'App\Http\Controllers\SauveteurController@fineOne')->name('sauveteur');
 Route::get('/sauveteurs', 'App\Http\Controllers\SauveteurController@findAll')->name('sauveteurs');
 
 Route::get('/sauvetages', function() { return 'wip'; })->name('sauvetages');
