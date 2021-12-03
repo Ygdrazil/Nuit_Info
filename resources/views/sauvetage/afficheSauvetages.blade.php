@@ -17,7 +17,7 @@
 		<!-- MAIN -->
 		<section id="main">
 			@foreach($intervals as $year => $sauvetages)
-				<h1>{{ $year }} {{ $year + $interval }}</h1>
+				{{ $year }}
 			@foreach
 		</section>
 
