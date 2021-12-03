@@ -47,7 +47,6 @@ window.addEventListener("DOMContentLoaded", _ => {
             if(parseInt(logo.style.left) >= 0 - 30){
                 if (keyName == "q") {
                     logo.style.left = (parseInt(logo.style.left || 30) - 10)+'px';
-                    console.log(click)
                 };
             }
             if(parseInt(logo.style.left) <= vw - 130){
@@ -69,10 +68,10 @@ window.addEventListener("DOMContentLoaded", _ => {
     let w1 = logo.offsetWidth
     let b1 = y1 + h1;
     let r1 = x1 + w1;
-    let x2 = parseInt(phare.style.left)
-    let y2 = parseInt(phare.style.top)
-    let h2 = phare.offsetHeight
-    let w2 = phare.offsetWidth
+    let x2 = parseInt(img.style.left)
+    let y2 = parseInt(img.style.top)
+    let h2 = img.offsetHeight
+    let w2 = img.offsetWidth
     let b2 = y2 + h2;
     let r2 = x2 + w2;
 
