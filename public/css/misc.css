@@ -66,6 +66,13 @@ nav .nav-content .links{
 .nav-content .links li label:hover{
     background: #74aafa;
 }
+
+/* current page */
+.active_link{
+    background: #74aafa;
+}
+/* end current page */
+
 .wrapper .search-icon,
 .wrapper .menu-icon{
     color: #fff;
@@ -148,6 +155,7 @@ nav .nav-content .links{
     line-height: 30px;
     border-radius: 0px!important;
 }
+
 .nav-content .links ul ul{
     position: absolute;
     top: 0;
