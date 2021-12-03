@@ -1,4 +1,8 @@
 .main form{
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr 1fr;
+}
+
+.main form div{
+    display: flex;
 }

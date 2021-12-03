@@ -31,7 +31,6 @@
                     <input type="password" name="new_password" placeholder="new_password" />
                     <input type="password" name="confirm_password" placeholder="confirm_password" />
                 </div>
-
 				<button type="submit">Modifier mes informations</button>
 			</form>
         </section>
