@@ -59,7 +59,7 @@ class SauveteurController extends Controller
 		$alpha = [];
 
 		foreach ($sauveteurs as $sauveteur) {
-			array_push($alpha, 'dede');
+			array_push($alpha, substr($sauveteur->nom, 0, 1));
 		};
 
 		$alpha = array_unique($alpha);
