@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", _ => {
 
     var img = document.createElement('img');
     img.src = 'pictures/phare.png';
-    contentPhare = document.querySelectorAll('.search-box')[0];
+    contentPhare = document.querySelectorAll('.nav-content')[0];
     img.style.height = '30px'
     img.style.width = 'auto'
     img.style.marginTop = '-55px'
