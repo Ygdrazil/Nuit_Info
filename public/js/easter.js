@@ -41,7 +41,7 @@ window.addEventListener("DOMContentLoaded", _ => {
                 }
                 if(parseInt(logo.style.top) <= vh - 60){
                     if (keyName == "s") {
-                        logo.style.top = (parseInt(logo.style.top || 40) + 10)+'px';
+                        logo.style.top = (parseInt(logo.style.top || 15) + 10)+'px';
                     };
                 }
                 if(parseInt(logo.style.left) >= 0 - 30){
@@ -56,7 +56,7 @@ window.addEventListener("DOMContentLoaded", _ => {
                 }
                 if(parseInt(logo.style.top) >= 0 + 30){
                     if (keyName == "z") {
-                        logo.style.top = (parseInt(logo.style.top || 40) - 10)+'px';
+                        logo.style.top = (parseInt(logo.style.top || 15) - 10)+'px';
                     };
                 }
                 let x1 = logo.offsetLeft
