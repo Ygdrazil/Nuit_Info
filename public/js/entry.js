@@ -1,8 +1,10 @@
 const form = document.getElementById('form');
-const username = document.getElementById('username');
 const email = document.getElementById('email');
+const username = document.getElementById('username');
+// const name = document.getElementById('name');
+// const surname = document.getElementById('surname');
 const password = document.getElementById('password');
-const password2 = document.getElementById('password2');
+const confirm_password = document.getElementById('confirm_password');
 
 form.addEventListener('submit', e => {
 	e.preventDefault();
@@ -15,7 +17,7 @@ function checkInputs() {
 	const usernameValue = username.value.trim();
 	const emailValue = email.value.trim();
 	const passwordValue = password.value.trim();
-	const password2Value = password2.value.trim();
+	const confirm_passwordValue = confirm_password.value.trim();
 	
 	if(usernameValue === '') {
 		setErrorFor(username, 'Username cannot be blank');
@@ -37,12 +39,12 @@ function checkInputs() {
 		setSuccessFor(password);
 	}
 	
-	if(password2Value === '') {
-		setErrorFor(password2, 'Password2 cannot be blank');
-	} else if(passwordValue !== password2Value) {
-		setErrorFor(password2, 'Passwords does not match');
+	if(confirm_passwordValue === '') {
+		setErrorFor(confirm_password, 'confirm_password cannot be blank');
+	} else if(passwordValue !== confirm_passwordValue) {
+		setErrorFor(confirm_password, 'Passwords does not match');
 	} else{
-		setSuccessFor(password2);
+		setSuccessFor(confirm_password);
 	}
 }
 
