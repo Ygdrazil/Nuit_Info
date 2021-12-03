@@ -2,11 +2,21 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         @include('layouts.head')
+
+        <!-- Styles -->
+
+        <!-- Scripts -->
+
+        <!-- Libs -->
+        
     </head>
     <body>
+        <!-- HEADER -->
         @include('layouts.header')
 
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <!-- MAIN -->
+        <section id="main">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <form action="{{ route('sauveteur.nouveau.post') }}" method="POST">
             @csrf
             <input type="text" name="nom" placeholder="Nom" value="{{ old('nom') }}">
@@ -17,6 +27,9 @@
             <textarea name="source" placeholder="Source" maxlength="120"  value="{{ old('source') }}"></textarea>
             <input type="submit" value="Créer un sauveteur">
         </form>
+        </section>
+
+        <!-- FOOTER -->
     	@include('layouts.footer')
     </body>
 </html>
