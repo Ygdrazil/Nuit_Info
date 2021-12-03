@@ -10,7 +10,7 @@ class Admin
 {
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::user()->id == 3) return $next($request);
+        if (Auth::user()->id == 6) return $next($request);
 
         return redirect(route('welcome'));
     }
