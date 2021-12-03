@@ -59,6 +59,13 @@ body {
 	border-color: #777;
 }
 
+.form_other {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+    font-size: small;
+}
+
 .form button {
 	background-color: #3586ff;
 	border: 2px solid #3586ff;
