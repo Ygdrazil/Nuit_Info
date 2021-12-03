@@ -27,17 +27,22 @@ Route::any('/logout', 'App\Http\Controllers\AccountController@logout')->middlewa
 // Sauveteur(s)
 Route::get('/sauveteurs', 'App\Http\Controllers\SauveteurController@findAll')->name('sauveteurs');
 Route::get('/sauveteur/{sauveteur_id}', 'App\Http\Controllers\SauveteurController@findOne')->name('sauveteur');
-Route::get('/admin/sauveteur/nouveau', function () { return view('sauveteur.createSauveteur'); })->middleware(['auth', 'admin'])->name('sauveteur.nouveau');
-Route::post('/admin/sauveteur/nouveau', 'App\Http\Controllers\SauveteurController@create')->middleware(['auth', 'admin'])->name('sauveteur.nouveau.post');
 
 // Sauvetage(s)
 Route::get('/sauvetages', 'App\Http\Controllers\SauvetageController@findAll')->name('sauvetages');
 Route::get('/sauvetage/{sauvetage_id}', 'App\Http\Controllers\SauvetageController@findOne')->name('sauvetage');
-Route::get('/admin/sauvetage/nouveau', function () { return view('sauvetage.createSauvetage'); })->middleware(['auth', 'admin'])->name('sauvetage.nouveau');
-Route::post('/admin/sauvetage/nouveau', 'App\Http\Controllers\SauvetageController@create')->middleware(['auth', 'admin'])->name('sauvetage.nouveau.post');
 
 // Bateau(x)
 Route::get('/bateaux', 'App\Http\Controllers\BateauController@findAll')->name('bateaux');
 Route::get('/bateau/{bateau_id}', 'App\Http\Controllers\BateauController@findOne')->name('bateau');
+
+// Soumission(s)
+Route::post('/soumission/nouvelle', 'App\Http\Controllers\SoumissionController@add')->middleware(['auth'])->name('soumission.nouvelle.post');
+
+// Admin
+Route::get('/admin/sauveteur/nouveau', function () { return view('sauveteur.createSauveteur'); })->middleware(['auth', 'admin'])->name('sauveteur.nouveau');
+Route::post('/admin/sauveteur/nouveau', 'App\Http\Controllers\SauveteurController@create')->middleware(['auth', 'admin'])->name('sauveteur.nouveau.post');
+Route::get('/admin/sauvetage/nouveau', function () { return view('sauvetage.createSauvetage'); })->middleware(['auth', 'admin'])->name('sauvetage.nouveau');
+Route::post('/admin/sauvetage/nouveau', 'App\Http\Controllers\SauvetageController@create')->middleware(['auth', 'admin'])->name('sauvetage.nouveau.post');
 Route::get('/admin/bateau/nouveau', function () { return view('bateau.createBateau'); })->middleware(['auth', 'admin'])->name('bateau.nouveau');
 Route::post('/admin/bateau/nouveau', 'App\Http\Controllers\BateauController@create')->middleware(['auth', 'admin'])->name('bateau.nouveau.post');
