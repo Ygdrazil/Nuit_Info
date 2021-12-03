@@ -1,1 +1,1 @@
-document.querySelector('.logo').style.visibility = none
+document.getElementsByClassName('logo')[0].style.visibility = none
