@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", _ => {
     document.addEventListener("keypress", (event) => {
         var keyName = event.key;
         if (keyName == "s") {
-            logo.style.top = (parseInt(logo.style.top || 0) + 100)+'px';
+            logo.style.top = (parseInt(logo.style.top || 0) + 10)+'px';
         };
     }, false);
 });
