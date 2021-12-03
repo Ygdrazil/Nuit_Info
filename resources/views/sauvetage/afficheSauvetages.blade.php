@@ -16,6 +16,7 @@
 
 		<!-- MAIN -->
 		<section id="main">
+			<h1>La liste des Sauvetages</h1>
 			@JSON($sauvetages)
 		</section>
 
