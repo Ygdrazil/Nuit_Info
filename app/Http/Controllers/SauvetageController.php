@@ -62,6 +62,8 @@ class SauvetageController extends Controller
 			};
 		};
 
+		dd($intervals);
+
         return view('sauvetage.afficheSauvetages', compact('intervals', 'interval'));
     }
 
