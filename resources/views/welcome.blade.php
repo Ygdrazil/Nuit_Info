@@ -17,7 +17,7 @@
 		<!-- MAIN -->
 		<section id="main">
       <h1 class="line anim-typewriter">Sauveteurs du Dunkerquois</h1>
-      <h2 class="sentence">270 ans d'histoire</h2>
+      <h2 class="sentence">270 ans d'histoire !</h2>
       <p>Bienvenue sur le site des sauveteurs du dunkerquois. Ce site rend hommage aux femmes, hommes et enfants qui ont réalisé des actes de sauvetages en milieu aquatique.</p>
       <p>Ces sauveteurs, habitants du dunkerquois (de Bray-Dunes à Grand-Fort-Philippe), ont participé à plus de 900 sauvetages en mer et plus de 1100 sauvetages individuels. Œuvrant avec courage, abnégation et souvent au mépris du risque ils méritent amplement que leurs actes soient pérennisés.</p>
       <br>
