@@ -1,3 +1,5 @@
+{{ request()->url() }}
+	
 <!-- WRAPPER HEADER -->
 <div class="wrapper">
     <nav>
