@@ -1,1 +1,1 @@
-document.querySelectorAll('.logo a').removeAttribute("a")
+document.querySelector('.logo').removeAttribute("a")
