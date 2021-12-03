@@ -4,7 +4,8 @@ window.addEventListener("DOMContentLoaded", _ => {
     document.querySelectorAll('.logo a')[0].style.display = 'none'
     logo.style.height = '30px'
     logo.style.width = 'auto'
-    Document.appendChild(logo)
+    logo.style.position = 'fixed'
+    contentLogo.appendChild(logo)
 
     logo.addEventListener('keydown', logKey);
 
