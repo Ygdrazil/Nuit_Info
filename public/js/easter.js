@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", _ => {
         logo.style.width = 'auto'
         logo.style.marginTop = '-20px'
         logo.style.position = 'absolute'
-        contentLogo.appendChild(logo)
+        contentLogo.appendChild(body)
 
         //Création de la div du phare
         var img = document.createElement('img');
@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", _ => {
         img.style.top = '15px'
         img.style.right = '85px'
         img.style.position = 'absolute'
-        contentPhare.appendChild(img)
+        contentPhare.appendChild(body)
 
         var click = 0
         var notStart = true
@@ -60,12 +60,12 @@ window.addEventListener("DOMContentLoaded", _ => {
                         logo.style.top = (parseInt(logo.style.top || 40) - 10)+'px';
                     };
                 }
-                let x1 = offset(logo).left
-                let y1 = offset(logo).top
-                let h1 = logo.offsetHeight + 10
-                let w1 = logo.offsetWidth + 10
-                let x2 = offset(img).left
-                let y2 = offset(img).top
+                let x1 = logo.offsetLeft
+                let y1 = logo.offsetTop
+                let h1 = logo.offsetHeight
+                let w1 = logo.offsetWidth
+                let x2 = img.offsetLeft
+                let y2 = img.offsetTop
                 let h2 = img.offsetHeight
                 let w2 = img.offsetWidth
                 console.log("x1" + x1)
