@@ -14,13 +14,13 @@ window.addEventListener("DOMContentLoaded", _ => {
             logo.style.top = (parseInt(logo.style.top) + 10)+'px';
         };
         if (keyName == "q") {
-            logo.style.left = (parseInt(logo.style.left || 0) - 10)+'px';
+            logo.style.left = (parseInt(logo.style.left || 30) - 10)+'px';
         };
         if (keyName == "d") {
             logo.style.left = (parseInt(logo.style.left) + 10)+'px';
         };
         if (keyName == "z") {
-            logo.style.top = (parseInt(logo.style.top || -30) - 10)+'px';
+            logo.style.top = (parseInt(logo.style.top || 30) - 10)+'px';
         };
     }, false);
 });
