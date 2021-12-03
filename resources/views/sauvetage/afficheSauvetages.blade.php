@@ -16,7 +16,9 @@
 
 		<!-- MAIN -->
 		<section id="main">
-			@JSON($sauvetages)
+			@foreach($intervals as $year => $sauvetages)
+				<h1>{{ $year }} {{ $year + $interval }}</h1>
+			@foreach
 		</section>
 
 		<!-- FOOTER -->
