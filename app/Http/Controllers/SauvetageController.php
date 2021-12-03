@@ -4,19 +4,32 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Sauvetage;
+use \Carbon\Carbon;
 
 class SauvetageController extends Controller
 {
     public function create(Request $request)
     {
+		$request->validate([
+			'titre' => 'required',
+			'date_sauvetage' => 'required',
+			'description' => 'required',
+			'source' => 'required',
+			'info_sauvetage' => 'required',
+			'nb_sauve' => 'required',
+			'duree' => 'required',
+			'nb_equipage_sauve' => 'nullable',
+		]);
+
         $sauvetage = new Sauvetage();
-        $sauvetage->description = $request->description;
-        $sauvetage->source = $request->source;
         $sauvetage->titre = $request->titre;
         $sauvetage->date_sauvetage = $request->date_sauvetage;
+        $sauvetage->description = $request->description;
+        $sauvetage->source = $request->source;
         $sauvetage->info_sauvetage = $request->info_sauvetage;
         $sauvetage->nb_sauve = $request->nb_sauve;
         $sauvetage->duree = $request->duree;
+		$sauvetage->nb_equipage_sauve = $request->nb_equipage_sauve;
         $sauvetage->save();
 
         return redirect(route('sauvetage.nouveau'));
@@ -29,7 +42,21 @@ class SauvetageController extends Controller
 
     public function findAll()
     {
-        $sauvetages = Sauvetage::all();
+		$interval = 25;
+
+		$res = [];
+
+        $sauvetages = Sauvetage::orderBy('date_sauvetage')->get();
+		$min = Carbon::createFromFormat('Y-m-d', $sauvetages[0]->date_sauvetage)->year;
+		$min -= $min%$interval;
+
+		dd($sauvetages->isNotEmpty());
+		
+		while ($sauvetages->isNotEmpty()) {
+			# code...
+		};
+
+		dd($min);
         return view('sauvetage.afficheSauvetages', compact('sauvetages'));
     }
 
