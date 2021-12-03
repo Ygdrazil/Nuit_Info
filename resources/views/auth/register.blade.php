@@ -27,9 +27,9 @@
 		<div class="header">
 			<h2>Créer un compte</h2>
 		</div>
-		<form action="{{ route('register.post') }}" method="post" id="form" class="form">
+		<form action="." method="post" id="form" class="form">
 			<div class="form-control">
-				<input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="email@exemple.com" />
+				<input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="Email" />
 				<i class="fas fa-check-circle"></i>
 				<i class="fas fa-exclamation-circle"></i>
 				<small>Error message</small>
