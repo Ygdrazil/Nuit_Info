@@ -11,6 +11,16 @@
     transform: translateY(-50%);
 }
 
+.sentence{
+    position: relative;
+    top: 50%;
+    width: 16em;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
 /*Animation*/
 
 .anim-typewriter {
