@@ -1,2 +1,1 @@
-logo = document.querySelectorAll('.logo')
-logo.removeAttribute("href")
+document.querySelectorAll('.logo a').style.pointer-events = 'none'
