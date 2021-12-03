@@ -5,10 +5,10 @@
     <input type="checkbox" id="show-menu">
     <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
     <div class="nav-content">
-    <div class="logo"><a href="."><img src="https://testlehesscrew.weiha.online/pictures/boat.png"></a></div>
+    <div class="logo"><a href="/"><img src="https://testlehesscrew.weiha.online/pictures/boat.png"></a></div>
         <ul class="links">
             <li>
-                <a href="{{ route('bateaux') }}" class="desktop-link">Bateaux</a>
+                <a href="{{ route('bateaux') }}" class="{{ (strpos(request()->url(), 'bateau') !== false) ? 'active_link' : '' }}">Bateaux</a>
                 <!-- <input type="checkbox" id="show-services">
                 <label for="show-services">Bateau</label>
                 <ul>
@@ -27,8 +27,8 @@
                 </li>
                 </ul> -->
             </li>
-            <li><a href="{{ route('sauvetages') }}">Sauvetages</a></li>
-            <li><a href="{{ route('sauveteurs') }}">Sauveteurs</a></li>
+            <li><a href="{{ route('sauvetages') }}" class="{{ (strpos(request()->url(), 'sauvetage') !== false) ? 'active_link' : '' }}">Sauvetages</a></li>
+            <li><a href="{{ route('sauveteurs') }}" class="{{ (strpos(request()->url(), 'sauveteur') !== false) ? 'active_link' : '' }}">Sauveteurs</a></li>
             @guest
                 <li><a href="{{ route('register') }}">S'inscrire</a></li>
                 <li><a href="{{ route('login') }}">Se connecter</a></li>
