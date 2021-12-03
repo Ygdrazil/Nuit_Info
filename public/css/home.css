@@ -100,3 +100,9 @@ p{
         padding: 150px 50px 150px 50px
     }
 }
+
+@media (max-width: 475px){
+    .line{
+        font-size: 125%;
+    }
+}
