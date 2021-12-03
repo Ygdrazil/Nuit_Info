@@ -35,9 +35,13 @@
 			<div class="form_input">
 				<input type="password" name="password" id="password" value="{{ old('password') }}" placeholder="Mot de passe" />
 			</div>
+
 			<button type="submit">Se connecter</button>
+
+			<div class="form_other">
+				Pas de compte ?<a href="{{ route('register') }}">Créer un compte</a>
+			</div>
 		</form>
-		Pas de compte ?<a href="{{ route('register') }}">Créer un compte</a>
 	</div>
 </body>
 </html>
