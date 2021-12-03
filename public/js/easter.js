@@ -11,6 +11,8 @@ window.addEventListener("DOMContentLoaded", _ => {
     var click =0
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
     const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+    console.log(vw)
+    var notStart = true
 
     logo.addEventListener("click", (event) => {
         click+=1
@@ -19,28 +21,32 @@ window.addEventListener("DOMContentLoaded", _ => {
     document.addEventListener("keypress", (event) => {
         var keyName = event.key;
         if(click >= 3){
-            if(parseInt(logo.style.top <= vh)){
+            if(notStart){
+                logo.style.top = 40 + 'px'
+                logo.style.left = 30 + 'px'
+                notStart = false
+            }
+            if(parseInt(logo.style.top) <= vh){
                 if (keyName == "s") {
                     logo.style.top = (parseInt(logo.style.top || 40) + 10)+'px';
                 };
             }
-            if(parseInt(logo.style.left >= 0)){
+            if(parseInt(logo.style.left) >= 0){
                 if (keyName == "q") {
                     logo.style.left = (parseInt(logo.style.left || 30) - 10)+'px';
                     console.log(click)
                 };
             }
-            if(parseInt(logo.style.left <= vw)){
+            if(parseInt(logo.style.left) <= vw){
                 if (keyName == "d") {
                     logo.style.left = (parseInt(logo.style.left || 30) + 10)+'px';
                 };
             }
-            if(parseInt(logo.style.top >= 0)){
+            if(parseInt(logo.style.top) >= 0){
                 if (keyName == "z") {
                     logo.style.top = (parseInt(logo.style.top || 40) - 10)+'px';
                 };
             }
-            console.log(click)
         }
     }, false);
 });
