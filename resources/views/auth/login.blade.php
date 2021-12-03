@@ -39,7 +39,7 @@
 			<button type="submit">Se connecter</button>
 
 			<div class="form_other">
-				Pas de compte ? <a href="{{ route('register') }}">Créer un compte</a>
+				Pas de compte ? <a href="{{ route('register') }}">Créer un compte</a> <br>
 				<a href="{{ route('welcome') }}">Retour</a>
 			</div>
 		</form>
