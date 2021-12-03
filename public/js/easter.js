@@ -5,13 +5,13 @@ window.addEventListener("DOMContentLoaded", _ => {
 
         //Création de la div du bateau pour l'easter egg
         logo = document.querySelectorAll('.logo a img')[0];
-        body= document.querySelectorAll('body')[0];
+        body = document.querySelectorAll('body')[0];
         document.querySelectorAll('.logo a')[0].style.display = 'none'
         logo.style.height = '30px'
         logo.style.width = 'auto'
         logo.style.marginTop = '-20px'
         logo.style.position = 'absolute'
-        contentLogo.appendChild(body)
+        body.appendChild(logo)
 
         //Création de la div du phare
         var img = document.createElement('img');
@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", _ => {
         img.style.top = '15px'
         img.style.right = '85px'
         img.style.position = 'absolute'
-        contentPhare.appendChild(body)
+        body.appendChild(img)
 
         var click = 0
         var notStart = true
