@@ -36,6 +36,5 @@ Route::get('/bateaux', function() { return 'wip'; })->name('bateaux');
 Route::post('/sauvetage/nouveau', 'App\Http\Controllers\SauvetageController@create')->middleware(['auth'])->name('sauvetage.nouveau.post');
 Route::get('/sauvetage/nouveau', function () { return view('sauvetage.createSauvetage'); })->middleware(['auth'])->name('sauvetage.nouveau');
 
-Route::get('/sauvetages', 'App\Http\Controllers\SauvetageController@findAll')->name('sauvetages');
 
 Route::get('/account', function() { return 'wip'; })->name('account');
