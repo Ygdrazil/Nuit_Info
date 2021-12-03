@@ -18,9 +18,10 @@ class SoumissionController extends Controller
 		$type = $request->input('type');
 
 		$soumission = new Soumission();
-		
+
 		$soumission->description = $request->input('description');
 		$soumission->$type = $request->input('id');
+		$soumission->id_user = \Auth::user()->id;
 
 		$soumission->save();
 
