@@ -1,3 +1,3 @@
 window.addEventListener("DOMContentLoaded", _ => {
-    logo = document.querySelectorAll('logo a img')[0].style.display = 'none';
+    logo = document.querySelectorAll('logo')[0].pointer-events= 'none';
 });
