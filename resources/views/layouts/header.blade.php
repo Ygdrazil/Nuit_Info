@@ -27,8 +27,8 @@
                 </li>
                 </ul> -->
             </li>
-            <li><a href="{{ route('sauvetages') }}">Sauvetages</a></li>
-            <li><a href="{{ route('sauveteurs') }}">Sauveteurs</a></li>
+            <li><a href="{{ route('sauvetages') }}" class="{{ (request()->is('sauvetages') == 1) ? 'active_link' : '' }}">Sauvetages</a></li>
+            <li><a href="{{ route('sauveteurs') }}" class="{{ (request()->is('sauveteurs') == 1) ? 'active_link' : '' }}">Sauveteurs</a></li>
             @guest
                 <li><a href="{{ route('register') }}">S'inscrire</a></li>
                 <li><a href="{{ route('login') }}">Se connecter</a></li>
