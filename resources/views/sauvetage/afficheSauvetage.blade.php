@@ -18,12 +18,12 @@
 		<section id="main">
 			@JSON($sauvetage)
 			<h1>{{$sauvetage->titre}}</h1>
-			<h2>{{$sauvegarde->date_sauvetage}}</h2>
-			<h3>Nombre de personnes sauvées : {{$sauvegarde->nb_sauve}}</h3>
-			<h3>Nombre d'équipage sauvé : {{$sauvegarde->nb_equipage_sauve}}</h3>
-			<h3>Durée : {{$sauvegarde->duree}}</h3>
+			<h2>{{$sauvetage->date_sauvetage}}</h2>
+			<h3>Nombre de personnes sauvées : {{$sauvetage->nb_sauve}}</h3>
+			<h3>Nombre d'équipage sauvé : {{$sauvetage->nb_equipage_sauve}}</h3>
+			<h3>Durée : {{$sauvetage->duree}}</h3>
 			<p>{{$sauvetage->description}}</p>
-			<p>{{$sauvegarde->source}}</p>
+			<p>{{$sauvetage->source}}</p>
 
 			@auth
 				<form action="{{ route('soumission.nouvelle.post') }}" method="post">
