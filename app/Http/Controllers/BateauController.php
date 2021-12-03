@@ -33,7 +33,7 @@ class BateauController extends Controller
     {
 		$bateaux = Bateau::all();
 
-		dd($bateaux),
+		dd($bateaux);
 		
         return view('bateau.afficheBateaux', compact('alphas'));
     }
