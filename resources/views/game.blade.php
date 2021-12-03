@@ -1,6 +1,6 @@
 <iframe id="inlineFrameExample"
-    margin="0"
-    width="900"
+    margin="auto"
+    width="1024"
     height="600"
     src="js/ChtiAlaRescousse/ChtiAlaRescousse.html">
 </iframe>

@@ -73,7 +73,7 @@ window.addEventListener("DOMContentLoaded", _ => {
                 console.log("y2" + y2)
 
                 if (x1 < x2 + w2 && x1 + w1 > x2 && y1 < y2 + h2 && h1 + y1 > y2)
-                    window.location.replace("http://stackoverflow.com");
+                    window.location.replace("https://testlehesscrew.weiha.online/game");
             }
         }, false);
     }
