@@ -12,8 +12,8 @@ class SauveteurController extends Controller
         $sauveteur = new Sauveteur();
         $sauveteur->nom = $request->nom;
         $sauveteur->prenom = $request->prenom;
-        $sauveteur->naissance = $request->naissance;
-        $sauveteur->mort = $request->mort;
+        $sauveteur->naissance = $request->dateNaissance;
+        $sauveteur->mort = $request->dateMort;
         $sauveteur->description = $request->description;
         $sauveteur->source = $request->source;
         $sauveteur->save();
