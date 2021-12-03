@@ -1,7 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+
 body{
+    height: 100%;
+    width: 100%;
     display: flex;
 }
 
-form{
+.entry{
     margin: auto;
 }

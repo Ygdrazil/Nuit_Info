@@ -22,19 +22,21 @@
 		@endforeach
 		</ul>
 	@endif
+	<div class="entry">
+		<form action="{{ route('register.post') }}" method="post">
+			@csrf
 
-	<form action="{{ route('register.post') }}" method="post">
-		@csrf
+			<input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="Email" />
+			<input type="text" name="username" id="username" value="{{ old('username') }}" placeholder="Nom d'utilisateur" />
+			<input type="text" name="name" id="name" value="{{ old('name') }}" placeholder="Prénom" />
+			<input type="text" name="surname" id="surname" value="{{ old('surname') }}" placeholder="Nom de famille" />
 
-		<input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="Email" />
-		<input type="text" name="username" id="username" value="{{ old('username') }}" placeholder="Nom d'utilisateur" />
-		<input type="text" name="name" id="name" value="{{ old('name') }}" placeholder="Prénom" />
-		<input type="text" name="surname" id="surname" value="{{ old('surname') }}" placeholder="Nom de famille" />
+			<input type="password" name="password" id="password" value="{{ old('password') }}" placeholder="Mot de passe" />
+			<input type="password" name="confirm_password" id="confirm_password" value="{{ old('confirm_password') }}" placeholder="Confirmer le mot de passe" />
 
-		<input type="password" name="password" id="password" value="{{ old('password') }}" placeholder="Mot de passe" />
-		<input type="password" name="confirm_password" id="confirm_password" value="{{ old('confirm_password') }}" placeholder="Confirmer le mot de passe" />
-
-		<button type="submit">S'enregistrer</button>
-	</form>
+			<button type="submit">S'enregistrer</button>
+		</form>
+	</div>
+	
 </body>
 </html>
