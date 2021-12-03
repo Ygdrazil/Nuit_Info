@@ -54,32 +54,11 @@ class SauvetageController extends Controller
 		foreach ($sauvetages as $sauvetage) {
 			$y = Carbon::createFromFormat('Y-m-d', $sauvetage->date_sauvetage)->year;
 			if ($y >= $min && $y <= $max) {
-				$res[$min][] = $y;
+				$res[$min][] = $sauvetage;
 			} else {
 				$min = $max;
 				$max += $interval;
-				$y = Carbon::createFromFormat('Y-m-d', $sauvetage->date_sauvetage)->year;
-				if ($y >= $min && $y <= $max) {
-					$res[$min][] = $y;
-				} else {
-					$min = $max;
-					$max += $interval;
-					$y = Carbon::createFromFormat('Y-m-d', $sauvetage->date_sauvetage)->year;
-				if ($y >= $min && $y <= $max) {
-					$res[$min][] = $y;
-				} else {
-					$min = $max;
-					$max += $interval;
-					$y = Carbon::createFromFormat('Y-m-d', $sauvetage->date_sauvetage)->year;
-				if ($y >= $min && $y <= $max) {
-					$res[$min][] = $y;
-				} else {
-					$min = $max;
-					$max += $interval;
-					
-				};
-					};
-				};
+				$res[$min][] = $sauvetage;
 			};
 		};
 
