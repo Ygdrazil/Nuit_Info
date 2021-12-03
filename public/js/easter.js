@@ -14,12 +14,11 @@ window.addEventListener("DOMContentLoaded", _ => {
 
     logo.addEventListener("click", (event) => {
         click+=1
-        console.log(click)
     });
 
-    if (click>=3){
-        document.addEventListener("keypress", (event) => {
-            var keyName = event.key;
+    document.addEventListener("keypress", (event) => {
+        var keyName = event.key;
+        if(click >= 3){
             if(parseInt(logo.style.top <= vh)){
                 if (keyName == "s") {
                     logo.style.top = (parseInt(logo.style.top || 40) + 10)+'px';
@@ -28,6 +27,7 @@ window.addEventListener("DOMContentLoaded", _ => {
             if(parseInt(logo.style.left >= 0)){
                 if (keyName == "q") {
                     logo.style.left = (parseInt(logo.style.left || 30) - 10)+'px';
+                    console.log(click)
                 };
             }
             if(parseInt(logo.style.left <= vw)){
@@ -40,6 +40,7 @@ window.addEventListener("DOMContentLoaded", _ => {
                     logo.style.top = (parseInt(logo.style.top || 40) - 10)+'px';
                 };
             }
-        }, false);
-    }
+            console.log(click)
+        }
+    }, false);
 });

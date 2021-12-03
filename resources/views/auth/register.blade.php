@@ -52,6 +52,7 @@
 
 			<div class="form_other">
 				Déjà un compte ? <a href="{{ route('login') }}">Se connecter</a>
+				<a href="{{ route('welcome') }}">Retour</a>
 			</div>
 		</form>
 	</div>
