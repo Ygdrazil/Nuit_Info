@@ -4,6 +4,7 @@
 		@include('layouts.head')
 
 		<!-- Styles -->
+		<link rel="stylesheet" href="{{ asset('css/utilitaires.css') }}">
 
 		<!-- Scripts -->
 
@@ -16,15 +17,17 @@
 
 		<!-- MAIN -->
 		<section id="main">
-			<h1>La liste des Sauveteurs</h1>
-			@foreach($alphas as $alpha => $sauveteurs)
-				<h1>{{ $alpha }}</h1>
-				<ul>
-				@foreach($sauveteurs as $sauveteur)
-					<li><a href="{{ route('sauveteur', $sauveteur->id_sauveteur) }}">{{ $sauveteur->nom }} {{ $sauveteur->prenom }}</a></li>
+			<h1>La liste des Sauveteurs :</h1>
+			<div class="box">
+				@foreach($alphas as $alpha => $sauveteurs)
+					<h1>{{ $alpha }}</h1>
+					<ul>
+					@foreach($sauveteurs as $sauveteur)
+						<li><a href="{{ route('sauveteur', $sauveteur->id_sauveteur) }}">{{ $sauveteur->nom }} {{ $sauveteur->prenom }}</a></li>
+					@endforeach
+					</ul>
 				@endforeach
-				</ul>
-			@endforeach
+			</div>
 		</section>
 
 		<!-- FOOTER -->

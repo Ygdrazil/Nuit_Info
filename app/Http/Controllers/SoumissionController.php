@@ -10,7 +10,21 @@ class SoumissionController extends Controller
 	function add(Request $request)
 	{
 		$request->validate([
-
+			'description' => 'required',
+			'id' => 'required',
+			'type' => 'required'
 		]);
+
+		$type = $request->input('type');
+
+		$soumission = new Soumission();
+
+		$soumission->description = $request->input('description');
+		$soumission->$type = $request->input('id');
+		$soumission->id_user = \Auth::user()->id;
+
+		$soumission->save();
+
+		return back();
 	}
 }
