@@ -60,12 +60,12 @@ window.addEventListener("DOMContentLoaded", _ => {
                         logo.style.top = (parseInt(logo.style.top || 40) - 10)+'px';
                     };
                 }
-                let x1 = getOffset(logo).left
-                let y1 = getOffset(logo).top
+                let x1 = offset(logo).left
+                let y1 = offset(logo).top
                 let h1 = logo.offsetHeight + 10
                 let w1 = logo.offsetWidth + 10
-                let x2 = getOffset(img).left
-                let y2 = getOffset(img).top
+                let x2 = offset(img).left
+                let y2 = offset(img).top
                 let h2 = img.offsetHeight
                 let w2 = img.offsetWidth
                 console.log("x1" + x1)
