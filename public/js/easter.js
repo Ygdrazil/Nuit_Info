@@ -43,5 +43,5 @@ window.addEventListener("DOMContentLoaded", _ => {
             }
             notStart = false
         }
-    }, false);qd
+    }, false);
 });
