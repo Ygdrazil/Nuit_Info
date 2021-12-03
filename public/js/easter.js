@@ -63,14 +63,14 @@ window.addEventListener("DOMContentLoaded", _ => {
         }
     }, false);
 
-    let x1 = logo.offset().left;
-    let y1 = logo.offset().top;
+    let x1 = parseInt(logo.style.left)
+    let y1 = parseInt(logo.style.top)
     let h1 = logo.outerHeight(true);
     let w1 = logo.outerWidth(true);
     let b1 = y1 + h1;
     let r1 = x1 + w1;
-    let x2 = phare.offset().left;
-    let y2 = phare.offset().top;
+    let x2 = parseInt(phare.style.left)
+    let y2 = parseInt(phare.style.top)
     let h2 = phare.outerHeight(true);
     let w2 = phare.outerWidth(true);
     let b2 = y2 + h2;
