@@ -22,7 +22,7 @@
 		@endforeach
 		</ul>
 	@endif
-	<!-- <div class="entry">
+	<div class="entry">
 		<form action="{{ route('register.post') }}" method="post">
 			@csrf
 
@@ -37,7 +37,7 @@
 			<button type="submit">S'enregistrer</button>
 		</form>
 	</div>
-	<div class="container"> -->
+	<div class="container">
 
 <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
 
