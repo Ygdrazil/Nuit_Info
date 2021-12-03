@@ -44,9 +44,15 @@ class SauvetageController extends Controller
     {
 		$interval = 25;
 
+		$res = [];
+
         $sauvetages = Sauvetage::orderBy('date_sauvetage')->get();
 		$min = Carbon::createFromFormat('Y-m-d', $sauvetages[0]->date_sauvetage)->year;
 		$min -= $min%$interval;
+		
+		while ($sauvetages->isNotEmpty()) {
+			# code...
+		};
 
 		dd($min);
         return view('sauvetage.afficheSauvetages', compact('sauvetages'));
