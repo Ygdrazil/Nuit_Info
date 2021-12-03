@@ -37,6 +37,7 @@
 			</div>
 			<button type="submit">Se connecter</button>
 		</form>
+		Pas de compte ?<a href="{{ route('register') }}">Créer un compte</a>
 	</div>
 </body>
 </html>

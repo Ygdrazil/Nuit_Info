@@ -49,6 +49,7 @@
 			</div>
 			<button type="submit">S'enregistrer</button>
 		</form>
+		Déjà un compte ?<a href="{{ route('login') }}">Se connecter</a>
 	</div>
 </body>
 </html>
