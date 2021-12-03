@@ -4,7 +4,7 @@
 		@include('layouts.head')
 
 		<!-- Styles -->
-		<link rel="stylesheet" href="utilitaires.css">
+		<link rel="stylesheet" href="{{ asset('css/utilitaires.css') }}">
 
 		<!-- Scripts -->
 
