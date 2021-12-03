@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", _ => {
     document.querySelectorAll('.logo a')[0].style.display = 'none'
     logo.style.height = '30px'
     logo.style.width = 'auto'
-    logo.style.marginTop = '-40px'
+    logo.style.marginTop = '-20px'
     logo.style.position = 'absolute'
     contentLogo.appendChild(logo)
 
