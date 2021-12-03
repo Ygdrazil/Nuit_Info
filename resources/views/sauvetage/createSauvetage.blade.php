@@ -16,7 +16,7 @@
 
         <!-- MAIN -->
         <section id="main">
-			<form action="{{ route('sauveteur.nouveau.post') }}" method="post">
+			<form action="{{ route('sauvetage.nouveau.post') }}" method="post">
 				@csrf
 				<input type="text" name="titre" placeholder="Titre" value="{{ old('titre') }}" />
                 <input type="date" name="date_sauvetage" value="{{ old('date_sauvetage') }}" />
