@@ -59,11 +59,12 @@ class SauveteurController extends Controller
 		foreach (Sauveteur::all() as $sauveteur) $alphas[substr($sauveteur->nom, 0, 1)][] = $sauveteur;
 		ksort($alphas);
 		
-        return view('sauveteur.afficheSauveteur', compact('alphas'));
+        return view('sauveteur.afficheSauveteurs', compact('alphas'));
     }
 
 	function findOne($sauveteur_id)
 	{
-		# code...
+		$sauveteur = Sauveteur::findOrFail($sauveteur_id);
+		return view('sauveteur.afficheSauveteur', compact('sauveteur'));
 	}
 }
