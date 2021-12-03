@@ -1,4 +1,3 @@
 window.addEventListener("DOMContentLoaded", _ => {
-    truc = document.getElementsByClassName('logo')
-    console.log(truc[0])
+    truc = document.getElementsByClassName('logo')[0].style.display = 'none';
 });
