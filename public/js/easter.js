@@ -1,1 +1,1 @@
-document.querySelector('.logo').removeAttribute("a")
+document.querySelector('.logo').style.visibility = none
