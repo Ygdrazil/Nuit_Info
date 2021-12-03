@@ -14,6 +14,7 @@ window.addEventListener("DOMContentLoaded", _ => {
 
     logo.addEventListener("click", (event) => {
         click+=1
+        console.log(click)
         if (click>=3){
             document.addEventListener("keypress", (event) => {
                 var keyName = event.key;
