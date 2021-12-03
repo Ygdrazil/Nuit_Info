@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () { return view('welcome'); })->name('welcome');
+Route::get('/', function () { return 'ok'; })->name('welcome');
 
 // Authentification
 Route::get('/login', function () { return view('auth.login'); })->middleware(['guest'])->name('login');
