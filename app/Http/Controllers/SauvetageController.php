@@ -52,26 +52,41 @@ class SauvetageController extends Controller
 		$max = $min + $interval;
 
 		foreach ($sauvetages as $sauvetage) {
-			$this->recursive($interval, $min, $max, $sauvetage);
+			$y = Carbon::createFromFormat('Y-m-d', $sauvetage->date_sauvetage)->year;
+			if ($y >= $min && $y <= $max) {
+				$res[$min][] = $y;
+			} else {
+				$min = $max;
+				$max += $interval;
+				$y = Carbon::createFromFormat('Y-m-d', $sauvetage->date_sauvetage)->year;
+				if ($y >= $min && $y <= $max) {
+					$res[$min][] = $y;
+				} else {
+					$min = $max;
+					$max += $interval;
+					$y = Carbon::createFromFormat('Y-m-d', $sauvetage->date_sauvetage)->year;
+				if ($y >= $min && $y <= $max) {
+					$res[$min][] = $y;
+				} else {
+					$min = $max;
+					$max += $interval;
+					$y = Carbon::createFromFormat('Y-m-d', $sauvetage->date_sauvetage)->year;
+				if ($y >= $min && $y <= $max) {
+					$res[$min][] = $y;
+				} else {
+					$min = $max;
+					$max += $interval;
+					
+				};
+					};
+				};
+			};
 		};
 
 		dd($res);
 
         return view('sauvetage.afficheSauvetages', compact('sauvetages'));
     }
-
-	function recursive($interval, $min, $max, $sauvetage)
-	{
-		$y = Carbon::createFromFormat('Y-m-d', $sauvetage->date_sauvetage)->year;
-		if ($y >= $min && $y <= $max) {
-			$res[$min][] = $y;
-		} else {
-			$min = $max;
-			$max += $interval;
-
-			$this->recursive($interval, $min, $max, $sauvetage);
-		};
-	}
 
 	function findOne($sauvetage_id)
 	{
