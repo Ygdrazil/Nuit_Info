@@ -1,1 +1,1 @@
-document.getElementById("logo").style.visibility = "hidden";
+document.getElementsByClassName('logo')[0].style.visibility='hidden';
