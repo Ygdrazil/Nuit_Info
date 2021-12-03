@@ -1,5 +1,3 @@
-{{ request()->current() }}
-	
 <!-- WRAPPER HEADER -->
 <div class="wrapper">
     <nav>
@@ -10,7 +8,7 @@
     <div class="logo"><a href="."><img src="https://testlehesscrew.weiha.online/pictures/boat.png"></a></div>
         <ul class="links">
             <li>
-                <a href="{{ route('bateaux') }}" class="{{ (request()->is('bateaux') == 1) ? 'active_link' : '' }}">Bateaux</a>
+                <a href="{{ route('bateaux') }}" class="{{ (strpos(request()->url(), 'bateau') !== false) ? 'active_link' : '' }}">Bateaux</a>
                 <!-- <input type="checkbox" id="show-services">
                 <label for="show-services">Bateau</label>
                 <ul>
@@ -29,8 +27,8 @@
                 </li>
                 </ul> -->
             </li>
-            <li><a href="{{ route('sauvetages') }}" class="{{ (request()->is('sauvetages') == 1) ? 'active_link' : '' }}">Sauvetages</a></li>
-            <li><a href="{{ route('sauveteurs') }}" class="{{ (request()->is('sauveteurs') == 1) ? 'active_link' : '' }}">Sauveteurs</a></li>
+            <li><a href="{{ route('sauvetages') }}" class="{{ (strpos(request()->url(), 'sauvetage') !== false) ? 'active_link' : '' }}">Sauvetages</a></li>
+            <li><a href="{{ route('sauveteurs') }}" class="{{ (strpos(request()->url(), 'sauveteur') !== false) ? 'active_link' : '' }}">Sauveteurs</a></li>
             @guest
                 <li><a href="{{ route('register') }}">S'inscrire</a></li>
                 <li><a href="{{ route('login') }}">Se connecter</a></li>
