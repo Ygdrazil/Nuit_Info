@@ -18,7 +18,7 @@
         <section id="main">
 			<form action="{{ route('account.post') }}" method="post">
 				@csrf
-                </div>
+                <div>
                     <h2>Modifier mes informations</h2>
                     <div class="form_input">
                         <input type="text" name="username" placeholder="username" value="{{ Auth::user()->username }}" />
@@ -32,7 +32,7 @@
                     <div class="form_input">
                         <input type="text" name="email" placeholder="email" value="{{ Auth::user()->email }}" />
                     </div>
-                <div>
+                </div>
                 <div>
                     <h2>Modifier mon mot de passe (laisser vide si vous ne souhaitez pas le changer)</h2>
                     <div class="form_input">
