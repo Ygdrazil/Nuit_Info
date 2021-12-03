@@ -17,7 +17,7 @@
 		<!-- MAIN -->
 		<section id="main">
 			@foreach($intervals as $year => $sauvetages)
-				@JSON($sauvetages)
+				@JSON($year)
 			@endforeach
 		</section>
 
