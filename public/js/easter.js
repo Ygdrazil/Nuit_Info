@@ -5,4 +5,11 @@ window.addEventListener("DOMContentLoaded", _ => {
     logo.style.height = '30px'
     logo.style.width = 'auto'
     contentLogo.appendChild(logo)
+
+    logo.addEventListener('keydown', logKey);
+
+    var count = 0
+    function logKey(e) {
+        logo.style.top + 100;
+    }
 });
