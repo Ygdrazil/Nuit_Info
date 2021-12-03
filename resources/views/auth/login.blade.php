@@ -25,7 +25,7 @@
 	@endif
 	<div class="container">
 		<div class="header">
-			<h2>Créer un compte</h2>
+			<h2>Se connecter</h2>
 		</div>
 		<form action="{{ route('register.post') }}" method="post" id="form" class="form">
 			@csrf
