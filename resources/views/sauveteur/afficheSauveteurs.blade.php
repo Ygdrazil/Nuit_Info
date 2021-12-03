@@ -16,7 +16,14 @@
 
 		<!-- MAIN -->
 		<section id="main">
-			@JSON($sauveteur)
+			@foreach($alphas as $alpha => $sauveteurs)
+				<h1>{{ $alpha }}</h1>
+				<ul>
+				@foreach($sauveteurs as $sauveteur)
+					<li><a href="{{ route('sauveteur', $sauveteur->id_sauveteur) }}">{{ $sauveteur->nom }} {{ $sauveteur->prenom }}</a></li>
+				@endforeach
+				</ul>
+			@endforeach
 		</section>
 
 		<!-- FOOTER -->
