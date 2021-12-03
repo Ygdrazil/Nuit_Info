@@ -7,10 +7,11 @@ window.addEventListener("DOMContentLoaded", _ => {
     logo.style.position = 'fixed'
     contentLogo.appendChild(logo)
 
-    logo.addEventListener('keydown', logKey);
-
-    var count = 0
-    function logKey(e) {
-        logo.style.top + 100;
-    }
+    document.addEventListener("keypress", (event) => {
+        var keyName = event.key;
+        if (keyName == "s") {
+            console.log(keyName);
+            logo.style.top + 100;
+        };
+    }, false);
 });
