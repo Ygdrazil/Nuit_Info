@@ -58,6 +58,14 @@ class SauvetageController extends Controller
 			} else {
 				$min = $max;
 				$max += $interval;
+
+				$y = Carbon::createFromFormat('Y-m-d', $sauvetage->date_sauvetage)->year;
+				if ($y >= $min && $y <= $max) {
+					$res[$min][] = $y;
+				} else {
+					$min = $max;
+					$max += $interval;
+				};
 			};
 		};
 
