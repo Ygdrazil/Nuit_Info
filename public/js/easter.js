@@ -11,6 +11,7 @@ window.addEventListener("DOMContentLoaded", _ => {
     var click =0
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
     const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+    console.log(vw)
     var notStart = true
 
     logo.addEventListener("click", (event) => {
