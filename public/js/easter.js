@@ -1,4 +1,7 @@
 window.addEventListener("DOMContentLoaded", _ => {
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+
     logo = document.querySelectorAll('.logo a img')[0];
     contentLogo = document.querySelectorAll('.logo')[0];
     document.querySelectorAll('.logo a')[0].style.display = 'none'
@@ -14,13 +17,11 @@ window.addEventListener("DOMContentLoaded", _ => {
     img.style.height = '30px'
     img.style.width = 'auto'
     img.style.marginTop = '-55px'
-    img.style.marginRight = '30px'
+    img.style.markerLeft = (vw - 150) + "px"
     img.style.position = 'absolute'
     contentPhare.appendChild(img)
 
     var click = 0
-    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
     var notStart = true
 
     logo.addEventListener("click", (event) => {
