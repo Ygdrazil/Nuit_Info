@@ -21,7 +21,7 @@
 				<h1>{{ $alpha }}</h1>
 				<ul>
 				@foreach($bateaux as $bateau)
-					<li><a href="{{ route('bateau', $bateau->id_bateau) }}">{{ $bateau->nom }} {{ $bateau->prenom }}</a></li>
+					<li><a href="{{ route('bateau', $bateau->id_bateau) }}">{{ $bateau->nom }}</a></li>
 				@endforeach
 				</ul>
 			@endforeach

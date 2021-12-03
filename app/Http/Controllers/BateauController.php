@@ -31,9 +31,9 @@ class BateauController extends Controller
 
     public function findAll()
     {
-		$bateaux = Bateau::all();
-
-		dd($bateaux);
+		$alphas = [];
+		foreach (Bateau::all() as $bateau) $alphas[substr($bateau->nom, 0, 1)][] = $bateau;
+		ksort($alphas);
 		
         return view('bateau.afficheBateaux', compact('alphas'));
     }
