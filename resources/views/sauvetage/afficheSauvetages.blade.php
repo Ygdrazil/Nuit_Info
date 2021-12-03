@@ -19,7 +19,7 @@
 			@foreach($intervals as $year => $sauvetages)
 				<h1>{{ $year }} à {{ $year + $interval }}</h1>
 				@foreach($sauvetages as $sauvetage)
-					@JSON($sauvetage)
+					<h2><a href="">{{ $sauvetage->titre }}</a></h2>
 				@endforeach
 			@endforeach
 		</section>
