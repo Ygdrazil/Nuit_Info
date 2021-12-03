@@ -43,9 +43,11 @@ class SauvetageController extends Controller
     public function findAll()
     {
         $sauvetages = Sauvetage::orderBy('date_sauvetage')->get();
-		$min = $sauvetages[0]->date_sauvetage;
+		$min = Carbon::createFromFormat('Y-m-d', $sauvetages[0]->date_sauvetage)->year;
 
-		dd(Carbon::createFromFormat('Y-m-d', $min)->year);
+		$min = $min - ($min%25);
+
+		dd($min);
         return view('sauvetage.afficheSauvetages', compact('sauvetages'));
     }
 
