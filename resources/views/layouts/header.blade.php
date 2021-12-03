@@ -1,4 +1,4 @@
-{{ request()->url() }}
+{{ request()->route() }}
 	
 <!-- WRAPPER HEADER -->
 <div class="wrapper">
