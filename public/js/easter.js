@@ -1,2 +1,1 @@
-logo = document.querySelectorAll('.logo')
-logo.removeAttribute("href")
+console.log((document.getElementsByClassName('logo'))[0])

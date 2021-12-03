@@ -34,6 +34,7 @@
                 <li><a href="{{ route('login') }}">Se connecter</a></li>
             @endguest
             @auth
+                <li><a href="{{ route('account') }}">{{ \Illuminate\Support\Str::limit(Auth::user()->name, 12, '...') }}</a></li>
                 <li><a href="{{ route('logout') }}">Se déconnecter</a></li>
             @endauth
         </ul>
