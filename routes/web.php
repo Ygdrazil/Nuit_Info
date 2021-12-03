@@ -49,3 +49,5 @@ Route::get('/admin/sauvetage/nouveau', function () { return view('sauvetage.crea
 Route::post('/admin/sauvetage/nouveau', 'App\Http\Controllers\SauvetageController@create')->middleware(['auth', 'admin'])->name('sauvetage.nouveau.post');
 Route::get('/admin/bateau/nouveau', function () { return view('bateau.createBateau'); })->middleware(['auth', 'admin'])->name('bateau.nouveau');
 Route::post('/admin/bateau/nouveau', 'App\Http\Controllers\BateauController@create')->middleware(['auth', 'admin'])->name('bateau.nouveau.post');
+
+Route::get('/scrapping', 'App\Http\Controllers\SauvetageController@parseScrapping');
