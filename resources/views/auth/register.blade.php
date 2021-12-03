@@ -27,42 +27,25 @@
 		<div class="header">
 			<h2>Créer un compte</h2>
 		</div>
-		<form action="." method="post" id="form" class="form">
-			<div class="form-control">
+		<form action="{{ route('register.post') }}" method="post" id="form" class="form">
+			@csrf
+			<div class="form_input">
 				<input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="Email" />
-				<i class="fas fa-check-circle"></i>
-				<i class="fas fa-exclamation-circle"></i>
-				<small>Error message</small>
 			</div>
-			<div class="form-control">
+			<div class="form_input">
 				<input type="text" name="username" id="username" value="{{ old('username') }}" placeholder="Nom d'utilisateur" />
-				<i class="fas fa-check-circle"></i>
-				<i class="fas fa-exclamation-circle"></i>
-				<small>Error message</small>
 			</div>
-			<div class="form-control">
+			<div class="form_input">
 				<input type="text" name="name" id="name" value="{{ old('name') }}" placeholder="Prénom" />
-				<i class="fas fa-check-circle"></i>
-				<i class="fas fa-exclamation-circle"></i>
-				<small>Error message</small>
 			</div>
-			<div class="form-control">
+			<div class="form_input">
 				<input type="text" name="surname" id="surname" value="{{ old('surname') }}" placeholder="Nom de famille" />
-				<i class="fas fa-check-circle"></i>
-				<i class="fas fa-exclamation-circle"></i>
-				<small>Error message</small>
 			</div>		
-			<div class="form-control">
+			<div class="form_input">
 				<input type="password" name="password" id="password" value="{{ old('password') }}" placeholder="Mot de passe" />
-				<i class="fas fa-check-circle"></i>
-				<i class="fas fa-exclamation-circle"></i>
-				<small>Error message</small>
 			</div>
-			<div class="form-control">
+			<div class="form_input">
 				<input type="password" name="confirm_password" id="confirm_password" value="{{ old('confirm_password') }}" placeholder="Confirmer le mot de passe" />
-				<i class="fas fa-check-circle"></i>
-				<i class="fas fa-exclamation-circle"></i>
-				<small>Error message</small>
 			</div>
 			<button type="submit">S'enregistrer</button>
 		</form>

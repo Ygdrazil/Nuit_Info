@@ -23,13 +23,18 @@
 		@endforeach
 		</ul>
 	@endif
-	<div class="entry">
-		<form action="{{ route('login.post') }}" method="post">
+	<div class="container">
+		<div class="header">
+			<h2>Se connecter</h2>
+		</div>
+		<form action="{{ route('register.post') }}" method="post" id="form" class="form">
 			@csrf
-
-			<input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="Email" />
-			<input type="password" name="password" id="password" value="{{ old('password') }}" placeholder="Mot de passe" />
-
+			<div class="form_input">
+				<input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="Email" />
+			</div>		
+			<div class="form_input">
+				<input type="password" name="password" id="password" value="{{ old('password') }}" placeholder="Mot de passe" />
+			</div>
 			<button type="submit">Se connecter</button>
 		</form>
 	</div>

@@ -2,14 +2,23 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         @include('layouts.head')
+
+        <!-- Styles -->
+
+        <!-- Scripts -->
+
+        <!-- Libs -->
+        
     </head>
     <body>
+        <!-- HEADER -->
         @include('layouts.header')
+
         <!-- MAIN -->
-		<section id="main">
-            <form action="{{ route('sauvetage.nouveau.post') }}" method="POST">
-                @csrf
-                <input type="text" name="titre" placeholder="Titre">
+        <section id="main">
+			<form action="{{ route('sauveteur.nouveau.post') }}" method="POST">
+				@csrf
+				<input type="text" name="titre" placeholder="Titre">
                 <input type="date" name="date_sauvetage">
                 <textarea name="description" placeholder="Description" >
         
@@ -20,10 +29,10 @@
                 <input type="number" name="nb_sauve" placeholder="nb_sauve">
                 <input type="time" name="duree">
                 <input type="submit" value="Créer un sauvetage">
-            </form>
+			</form>
         </section>
+
+        <!-- FOOTER -->
     	@include('layouts.footer')
     </body>
 </html>
-
-
