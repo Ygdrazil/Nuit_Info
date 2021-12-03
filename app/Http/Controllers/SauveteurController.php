@@ -64,7 +64,7 @@ class SauveteurController extends Controller
 			$res[$first][] = $sauveteur;
 		};
 
-		sort($res);
+		ksort($res);
 
 		dd($res);
 		
