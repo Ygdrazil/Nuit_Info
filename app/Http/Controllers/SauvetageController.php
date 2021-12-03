@@ -43,8 +43,7 @@ class SauvetageController extends Controller
     public function findAll()
     {
 		$interval = 25;
-
-		$res = [];
+		$intervals = [];
 
         $sauvetages = Sauvetage::orderBy('date_sauvetage')->get();
 		$min = Carbon::createFromFormat('Y-m-d', $sauvetages[0]->date_sauvetage)->year;
@@ -54,18 +53,16 @@ class SauvetageController extends Controller
 		foreach ($sauvetages as $sauvetage) {
 			$y = Carbon::createFromFormat('Y-m-d', $sauvetage->date_sauvetage)->year;
 			if ($y >= $min && $y <= $max) {
-				$res[$min][] = $sauvetage;
+				$intervals[$min][] = $sauvetage;
 			} else {
 				$min = $y - $y%$interval;
 				$max = $min + $interval;
 				
-				$res[$min][] = $sauvetage;
+				$intervals[$min][] = $sauvetage;
 			};
 		};
 
-		dd($res);
-
-        return view('sauvetage.afficheSauvetages', compact('sauvetages'));
+        return view('sauvetage.afficheSauvetages', compact('intervals', 'interval'));
     }
 
 	function findOne($sauvetage_id)

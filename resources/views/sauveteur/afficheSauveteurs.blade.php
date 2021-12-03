@@ -16,6 +16,7 @@
 
 		<!-- MAIN -->
 		<section id="main">
+			<h1>La liste des Sauveteurs</h1>
 			@foreach($alphas as $alpha => $sauveteurs)
 				<h1>{{ $alpha }}</h1>
 				<ul>
