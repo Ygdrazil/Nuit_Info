@@ -27,7 +27,7 @@
 		<div class="header">
 			<h2>Se connecter</h2>
 		</div>
-		<form action="{{ route('register.post') }}" method="post" id="form" class="form">
+		<form action="{{ route('login.post') }}" method="post" id="form" class="form">
 			@csrf
 			<div class="form_input">
 				<input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="Email" />
