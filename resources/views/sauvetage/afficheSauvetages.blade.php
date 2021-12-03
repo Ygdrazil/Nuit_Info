@@ -11,6 +11,9 @@
 
     </head>
     <body>
+		@php
+		dd($intervals)
+		@endphp
 		<!-- HEADER -->
 		@include('layouts.header')
 
