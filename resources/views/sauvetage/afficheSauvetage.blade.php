@@ -16,7 +16,7 @@
 
 		<!-- MAIN -->
 		<section id="main">
-			
+			@JSON($sauvetage)
 		</section>
 
 		<!-- FOOTER -->
