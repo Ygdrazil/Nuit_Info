@@ -61,4 +61,9 @@ class SauveteurController extends Controller
 		
         return view('sauveteur.afficheSauveteur', compact('alphas'));
     }
+
+	function findOne($sauveteur_id)
+	{
+		# code...
+	}
 }
