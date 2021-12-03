@@ -20,12 +20,17 @@
 		<li><a href="mailto:sauveteurdudunkerquois@gmail.com"><ion-icon name="mail-outline"></ion-icon></a></li>
 	</ul>
 	<ul class="menu">
-		<li><a href="#">Qui sommes-nous</a></li>
-		<li><a href="#">Presse</a></li>
-		<li><a href="#">Sites amis</a></li>
-		<li><a href="#">Plan du site</a></li>
-		<li><a href="#">Lettres hebdomadaires</a></li>
-		<li><a href="#">Exprimez-vous</a></li>
+		<li><a href="{{ route('bateaux') }}">Bateaux</a></li>
+		<li><a href="{{ route('sauvetages') }}">Sauvetages</a></li>
+		<li><a href="{{ route('sauveteurs') }}">Sauveteurs</a></li>
+		@guest
+			<li><a href="{{ route('register') }}">S'inscrire</a></li>
+			<li><a href="{{ route('login') }}">Se connecter</a></li>
+		@endguest
+		@auth
+			<li><a href="{{ route('account') }}">{{ \Illuminate\Support\Str::limit(Auth::user()->name, 12, '...') }}</a></li>
+			<li><a href="{{ route('logout') }}">Se déconnecter</a></li>
+		@endauth
 	</ul>
 	<p>©2021 - LeHessCrew | Tous droits réservés</p>
 </footer>
