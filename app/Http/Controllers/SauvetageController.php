@@ -42,8 +42,9 @@ class SauvetageController extends Controller
     public function findAll()
     {
         $sauvetages = Sauvetage::orderBy('date_sauvetage')->get();
+		$min = $sauvetages[0];
 
-		dd($sauvetages);
+		dd($min);
         return view('sauvetage.afficheSauvetages', compact('sauvetages'));
     }
 
