@@ -24,6 +24,9 @@ Route::get('/account', function() { return view('auth.account'); })->middleware(
 Route::post('/account', 'App\Http\Controllers\AccountController@edit')->middleware(['auth'])->name('account.post');
 Route::any('/logout', 'App\Http\Controllers\AccountController@logout')->middleware(['auth'])->name('logout');
 
+//Games
+Route::get('/game', function () { return view('game'); })->name('game');
+
 // Sauveteur(s)
 Route::get('/sauveteurs', 'App\Http\Controllers\SauveteurController@findAll')->name('sauveteurs');
 Route::get('/sauveteur/{sauveteur_id}', 'App\Http\Controllers\SauveteurController@findOne')->name('sauveteur');
