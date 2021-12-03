@@ -30,3 +30,4 @@ Route::get('/sauveteurs', 'App\Http\Controllers\SauveteurController@findAll')->n
 
 Route::get('/sauvetages', function() { return 'wip'; })->name('sauvetages');
 Route::get('/bateaux', function() { return 'wip'; })->name('bateaux');
+Route::get('/account', function() { return 'wip'; })->name('account');
