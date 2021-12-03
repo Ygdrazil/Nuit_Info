@@ -35,7 +35,7 @@ window.addEventListener("DOMContentLoaded", _ => {
             var keyName = event.key;
             if(click >= 3){
                 if(notStart){
-                    logo.style.top = 35 + 'px'
+                    logo.style.top = 15 + 'px'
                     logo.style.left = 25 + 'px'
                     notStart = false
                 }
