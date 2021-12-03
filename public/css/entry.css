@@ -60,8 +60,8 @@ body {
 }
 
 .form_other {
-	padding: 10px 70px;
-	margin: 0 auto;
+	padding: 10px 0;
+	text-align: center;
     font-size: 12px;
 }
 
