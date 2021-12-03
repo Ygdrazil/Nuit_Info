@@ -79,9 +79,9 @@ class SauvetageController extends Controller
 		{
 			$data = json_decode($data);
 			$sauvetage = new Sauvetage();
-			$sauvetage->titre = $data->titre;
+			$sauvetage->titre = $data["titre"];
 			$sauvetage->date_sauvetage = new date("2021-01-01");
-			$sauvetage->description = $data->description;
+			$sauvetage->description = $data["description"];
 			$sauvetage->source = "source";
 			$sauvetage->info_sauvetage = "info";
 			$sauvetage->nb_sauve = 18;
