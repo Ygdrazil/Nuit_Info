@@ -16,6 +16,7 @@
 
 		<!-- MAIN -->
 		<section id="main">
+			<h1>La liste des Sauvetages</h1>
 			@foreach($intervals as $year => $sauvetages)
 				<h1>{{ $year }} à {{ $year + $interval }}</h1>
 				@foreach($sauvetages as $sauvetage)
