@@ -1,3 +1,14 @@
-#main img{
+#main .citation{
     width: 100%;
+    border-radius: 10px;
+}
+
+#main .box_pictures{
+    width: 100%;
+    height: 30%;
+}
+
+#main .box_pictures img{
+    width: 100%;
+    height: 50%;
 }
