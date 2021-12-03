@@ -63,6 +63,7 @@ class SauveteurController extends Controller
 		};
 
 		$alpha = array_unique($alpha);
+		sort($alpha);
 
 		dd($alpha);
 
