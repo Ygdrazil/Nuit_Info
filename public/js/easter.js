@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", _ => {
 
         //Création de la div du bateau pour l'easter egg
         logo = document.querySelectorAll('.logo a img')[0];
-        contentLogo = document.querySelectorAll('.logo')[0];
+        body= document.querySelectorAll('body')[0];
         document.querySelectorAll('.logo a')[0].style.display = 'none'
         logo.style.height = '30px'
         logo.style.width = 'auto'
