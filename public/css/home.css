@@ -94,3 +94,9 @@ p{
         font-size: 125%;
     }
 }
+
+@media (max-width: 575px){
+    #main {
+        padding: 150px 50px 150px 50px
+    }
+}
