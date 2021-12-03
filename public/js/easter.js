@@ -5,24 +5,23 @@ window.addEventListener("DOMContentLoaded", _ => {
 
         //Création de la div du bateau pour l'easter egg
         logo = document.querySelectorAll('.logo a img')[0];
-        contentLogo = document.querySelectorAll('.nav-content')[0];
+        content = document.querySelectorAll('.nav-content')[0];
         document.querySelectorAll('.logo a')[0].style.display = 'none'
         logo.style.height = '30px'
         logo.style.width = 'auto'
-        logo.style.marginTop = '-20px'
+        logo.style.top = '15px'
         logo.style.position = 'absolute'
-        contentLogo.appendChild(logo)
+        content.appendChild(logo)
 
         //Création de la div du phare
         var img = document.createElement('img');
         img.src = 'pictures/phare.png';
-        contentPhare = document.querySelectorAll('.nav-content')[0];
         img.style.height = '30px'
         img.style.width = 'auto'
         img.style.top = '15px'
         img.style.right = '85px'
         img.style.position = 'absolute'
-        contentPhare.appendChild(img)
+        content.appendChild(img)
 
         var click = 0
         var notStart = true
@@ -74,7 +73,7 @@ window.addEventListener("DOMContentLoaded", _ => {
                 console.log("y2" + y2)
 
                 if (x1 < x2 + w2 && x1 + w1 > x2 && y1 < y2 + h2 && h1 + y1 > y2)
-                    console.log('oui')
+                    window.location.replace("http://stackoverflow.com");
             }
         }, false);
     }
