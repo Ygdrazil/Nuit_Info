@@ -51,7 +51,8 @@
 			<button type="submit">S'enregistrer</button>
 
 			<div class="form_other">
-				Déjà un compte ? <a href="{{ route('login') }}">Se connecter</a>
+				Déjà un compte ? <a href="{{ route('login') }}">Se connecter</a> <br>
+				<a href="{{ route('welcome') }}">Retour</a>
 			</div>
 		</form>
 	</div>
