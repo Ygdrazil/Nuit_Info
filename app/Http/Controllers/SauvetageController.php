@@ -45,7 +45,7 @@ class SauvetageController extends Controller
         $sauvetages = Sauvetage::orderBy('date_sauvetage')->get();
 		$min = $sauvetages[0]->date_sauvetage;
 
-		dd(Carbon::now());
+		dd(Carbon::createFromFormat('Y-m-d', $min)->year);
         return view('sauvetage.afficheSauvetages', compact('sauvetages'));
     }
 
