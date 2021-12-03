@@ -23,7 +23,7 @@
 				<h2>Faire une soumission</h2>
 				<textarea name="description"></textarea>
 
-				<input type="hidden" name="id" value="{{ $sauveteur->id_sauvetage }}">
+				<input type="hidden" name="id" value="{{ $sauvetage->id_sauvetage }}">
 				<input type="hidden" name="type" value="id_sauvetage">
 				<button type="submit">Envoyer</button>
 			</form>
