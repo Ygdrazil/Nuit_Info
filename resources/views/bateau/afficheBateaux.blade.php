@@ -16,12 +16,14 @@
 
 		<!-- MAIN -->
 		<section id="main">
-			<h1>La liste des Sauvetages</h1>
-			@foreach($intervals as $year => $sauvetages)
-				<h1>{{ $year }} à {{ $year + $interval }}</h1>
-				@foreach($sauvetages as $sauvetage)
-					<h2><a href="{{ route('sauvetage', $sauvetage->id_sauvetage) }}">{{ $sauvetage->titre }}</a></h2>
+			<h1>La liste des Bateaux</h1>
+			@foreach($alphas as $alpha => $bateaux)
+				<h1>{{ $alpha }}</h1>
+				<ul>
+				@foreach($bateaux as $bateau)
+					<li><a href="{{ route('bateau', $bateau->id_bateau) }}">{{ $bateau->nom }}</a></li>
 				@endforeach
+				</ul>
 			@endforeach
 		</section>
 
