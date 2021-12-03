@@ -16,7 +16,8 @@ window.addEventListener("DOMContentLoaded", _ => {
     contentPhare = document.querySelectorAll('.nav-content')[0];
     img.style.height = '30px'
     img.style.width = 'auto'
-    img.style.marginTop = '-55px'
+    img.style.top = '55px'
+    img.style.left = '55px'
     img.style.position = 'absolute'
     contentPhare.appendChild(img)
 
