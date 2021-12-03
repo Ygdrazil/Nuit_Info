@@ -16,7 +16,9 @@
 
 		<!-- MAIN -->
 		<section id="main">
-			@JSON($interval)
+			@foreach($intervals as $sauvetages)
+				@JSON($sauvetages)
+			@endforeach
 		</section>
 
 		<!-- FOOTER -->
