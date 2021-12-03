@@ -16,7 +16,7 @@
 
 		<!-- MAIN -->
 		<section id="main">
-			<p>Salut mec test</p>
+			
 		</section>
 
 		<!-- FOOTER -->
