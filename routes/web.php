@@ -23,8 +23,8 @@ Route::post('/register', 'App\Http\Controllers\AccountController@register')->mid
 Route::any('/logout', 'App\Http\Controllers\AccountController@logout')->middleware(['auth'])->name('logout');
 
 // Creation sauveteur
-Route::post('/createSauveteur', 'App\Http\Controllers\SauveteurController@create')->middleware(['auth'])->name('createSauveteur.post');
-Route::get('/createSauveteur', function () { return view('sauveteur.createSauveteur'); })->middleware(['auth'])->name('createSauveteur');
+Route::post('/sauveteur/nouveau', 'App\Http\Controllers\SauveteurController@create')->middleware(['auth'])->name('sauveteur.nouveau.post');
+Route::get('/sauveteur/nouveau', function () { return view('sauveteur.createSauveteur'); })->middleware(['auth'])->name('sauveteur.nouveau');
 
 Route::get('/sauveteurs', 'App\Http\Controllers\SauveteurController@findAll')->name('sauveteurs');
 
