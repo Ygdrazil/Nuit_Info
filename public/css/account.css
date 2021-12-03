@@ -1,8 +1,25 @@
-.main form{
+body section form{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(1, 1fr);
 }
 
-.main form div{
-    display: flex;
+body section form div .form_input {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+body section form div .form_input input {
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+}
+
+body section form div .form_input input:focus {
+	outline: 0;
+	border-color: #777;
 }
