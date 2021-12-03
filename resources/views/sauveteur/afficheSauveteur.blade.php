@@ -20,7 +20,7 @@
 				<h1>{{ $alpha }}</h1>
 				<ul>
 				@foreach($sauveteurs as $sauveteur)
-					<li>@JSON($sauveteur)</li>
+					<li><a href="">{{ $sauveteur->nom }} {{ $sauveteur->prenom }}</a></li>
 				@endforeach
 				</ul>
 			@endforeach
