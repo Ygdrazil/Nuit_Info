@@ -16,19 +16,16 @@
 
         <!-- MAIN -->
         <section id="main">
-			<form action="{{ route('sauveteur.nouveau.post') }}" method="POST">
+			<form action="{{ route('sauveteur.nouveau.post') }}" method="post">
 				@csrf
-				<input type="text" name="titre" placeholder="Titre">
-                <input type="date" name="date_sauvetage">
-                <textarea name="description" placeholder="Description" >
-        
-                </textarea>
-                <textarea name="source" placeholder="Source" maxlength="120">
-                </textarea>
-                <input type="text" name="info_sauvetage" placeholder="Info Sauvetage">
-                <input type="number" name="nb_sauve" placeholder="nb_sauve">
-                <input type="time" name="duree">
-                <input type="submit" value="Créer un sauvetage">
+				<input type="text" name="titre" placeholder="Titre" value="{{ old('titre') }}" />
+                <input type="date" name="date_sauvetage" value="{{ old('date_sauvetage') }}" />
+                <textarea name="description" placeholder="Description" value="{{ old('description') }}"></textarea>
+                <textarea name="source" placeholder="Source" maxlength="120" value="{{ old('source') }}"></textarea>
+                <input type="text" name="info_sauvetage" placeholder="Info Sauvetage" value="{{ old('info_sauvetage') }}" />
+                <input type="number" name="nb_sauve" placeholder="nb_sauve" value="{{ old('nb_sauve') }}" />
+                <input type="time" name="duree" value="{{ old('duree') }}" />
+                <input type="submit" value="Créer un sauvetage" />
 			</form>
         </section>
 
