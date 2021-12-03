@@ -39,7 +39,7 @@
 
 @keyframes blinkTextCursor {
     from {
-          border-right-color: rgba(255, 255, 255, 0.75);
+          border-right-color: black
     }
     to {
           border-right-color: transparent;
