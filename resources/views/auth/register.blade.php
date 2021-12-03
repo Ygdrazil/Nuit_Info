@@ -48,8 +48,11 @@
 				<input type="password" name="confirm_password" id="confirm_password" value="{{ old('confirm_password') }}" placeholder="Confirmer le mot de passe" />
 			</div>
 			<button type="submit">S'enregistrer</button>
+			<div class="form_input">
+				Déjà un compte ?<a href="{{ route('login') }}">Se connecter</a>
+			</div>
 		</form>
-		Déjà un compte ?<a href="{{ route('login') }}">Se connecter</a>
+		
 	</div>
 </body>
 </html>
