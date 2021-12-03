@@ -19,10 +19,12 @@
 			@JSON($sauveteur)
 
 			<form action="{{ route('soumission.nouvelle.post') }}" method="post">
+				@csrf
 				<h2>Faire une soumission</h2>
 				<textarea name="description"></textarea>
 
-				<input type="hidden" name="id_sauveteur" value="{{ $sauveteur->id_sauveteur }}">
+				<input type="hidden" name="id" value="{{ $sauveteur->id_sauveteur }}">
+				<input type="hidden" name="type" value="id_sauveteur">
 				<button type="submit">Envoyer</button>
 			</form>
 		</section>
