@@ -29,14 +29,13 @@
             </li>
             <li><a href="{{ route('sauvetages') }}">Sauvetages</a></li>
             <li><a href="{{ route('sauveteurs') }}">Sauveteurs</a></li>
-            <li><a href="{{ route('register') }}">S'inscrire</a></li>
             @guest
+                <li><a href="{{ route('register') }}">S'inscrire</a></li>
                 <li><a href="{{ route('login') }}">Se connecter</a></li>
             @endguest
             @auth
                 <li><a href="{{ route('logout') }}">Se déconnecter</a></li>
             @endauth
-            
         </ul>
     </div>
     <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
