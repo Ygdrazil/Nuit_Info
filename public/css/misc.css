@@ -329,7 +329,7 @@ nav .nav-content .links{
     width: 10px;
     height: 200px;
     background: linear-gradient(#FF1A1A, transparent);
-    filter: blur(20px);
+    filter: blur(10px);
 }
 
 #up .rocket .img_rocket{
