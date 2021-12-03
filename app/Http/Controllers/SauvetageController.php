@@ -49,14 +49,20 @@ class SauvetageController extends Controller
         $sauvetages = Sauvetage::orderBy('date_sauvetage')->get();
 		$min = Carbon::createFromFormat('Y-m-d', $sauvetages[0]->date_sauvetage)->year;
 		$min -= $min%$interval;
+		$max = $min + $interval;
 
-		dd($sauvetages->isNotEmpty());
-		
-		while ($sauvetages->isNotEmpty()) {
-			# code...
+		foreach ($sauvetages as $sauvetage) {
+			$y = Carbon::createFromFormat('Y-m-d', $sauvetage->date_sauvetage)->year;
+			if ($y >= $min && $y <= $max) {
+				$res[$min][] = $sauvetage;
+			} else {
+				$min = $max;
+				$max += $interval;
+			};
 		};
 
-		dd($min);
+		dd($res);
+
         return view('sauvetage.afficheSauvetages', compact('sauvetages'));
     }
 
