@@ -1,1 +1,2 @@
-console.log((document.getElementsByClassName('logo'))[0])
+truc = document.getElementsByClassName('logo')
+console.log(truc)

@@ -55,15 +55,10 @@ class SauveteurController extends Controller
 
     public function findAll()
     {
-		$sauveteurs = Sauveteur::all();
-		$alpha = $res = [];
-
-		// Get alphabet
-		foreach ($sauveteurs as $sauveteur) array_push($alpha, substr($sauveteur->nom, 0, 1));
-		$alpha = array_unique($alpha); sort($alpha);
-
-		// dd($alpha);
-
+		$sauveteurs = [];
+		foreach (Sauveteur::all() as $sauveteur) $sauveteurs[substr($sauveteur->nom, 0, 1)][] = $sauveteur;
+		ksort($sauveteurs);
+		
         return view('sauveteur.afficheSauveteur', compact('sauveteurs'));
     }
 }
