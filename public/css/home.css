@@ -77,6 +77,20 @@ p{
 
 @media (max-width: 750px){
     #main {
-        padding: 100px;
+        padding: 150px 100px 150px 100px
+    }
+}
+
+@media (max-width: 650px){
+    #main {
+        padding: 150px 100px 150px 100px
+    }
+
+    .line{
+        font-size: 150%;
+    }
+
+    .sentence{
+        font-size: 125%;
     }
 }
