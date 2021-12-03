@@ -4,13 +4,14 @@ window.addEventListener("DOMContentLoaded", _ => {
     document.querySelectorAll('.logo a')[0].style.display = 'none'
     logo.style.height = '30px'
     logo.style.width = 'auto'
-    logo.style.position = 'fixed'
+    logo.style.marginTop = '-30px'
+    logo.style.position = 'absolute'
     contentLogo.appendChild(logo)
 
-    logo.addEventListener('keydown', logKey);
-
-    var count = 0
-    function logKey(e) {
-        logo.style.top + 100;
-    }
+    document.addEventListener("keypress", (event) => {
+        var keyName = event.key;
+        if (keyName == "s") {
+            logo.style.top = (parseInt(logo.style.top || 0) + 10)+'px';
+        };
+    }, false);
 });
