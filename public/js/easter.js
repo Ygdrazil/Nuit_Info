@@ -1,1 +1,1 @@
-document.querySelectorAll('.logo a').style.pointer-events = 'none'
+document.querySelectorAll('.logo a').removeAttribute("a")
