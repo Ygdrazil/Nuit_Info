@@ -16,7 +16,7 @@
 
 		<!-- MAIN -->
 		<section id="main">
-			@JSON($intervals)
+			@JSON($interval)
 		</section>
 
 		<!-- FOOTER -->
