@@ -21,4 +21,4 @@
 		<!-- FOOTER -->
 		@include('layouts.footer')
     </body>
-</html>
+</html>	
