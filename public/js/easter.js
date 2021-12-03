@@ -10,19 +10,17 @@ window.addEventListener("DOMContentLoaded", _ => {
 
     document.addEventListener("keypress", (event) => {
         var keyName = event.key;
-        if (keyName == "z") {
-            if(logo.style.top > 0+'px')
-                logo.style.top = (parseInt(logo.style.top) - 10)+'px';
-        };
         if (keyName == "s") {
-            logo.style.top = (parseInt(logo.style.top) + 10)+'px';
+            logo.style.top = (parseInt(logo.style.top || 30) + 10)+'px';
         };
         if (keyName == "q") {
-            if(logo.style.left > 0+'px')
-                logo.style.left = (parseInt(logo.style.left) - 10)+'px';
+            logo.style.left = (parseInt(logo.style.left || 30) - 10)+'px';
         };
         if (keyName == "d") {
             logo.style.left = (parseInt(logo.style.left) + 10)+'px';
+        };
+        if (keyName == "z") {
+            logo.style.top = (parseInt(logo.style.top || 30) - 10)+'px';
         };
     }, false);
 });
