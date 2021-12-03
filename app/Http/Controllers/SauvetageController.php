@@ -9,6 +9,8 @@ class SauvetageController extends Controller
 {
     public function create(Request $request)
     {
+		dd($request);
+		
 		$request->validate([
 			'titre' => 'required',
 			'date_sauvetage' => 'required',
