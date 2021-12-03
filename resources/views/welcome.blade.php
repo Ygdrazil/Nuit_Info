@@ -30,7 +30,7 @@
       </div>
       <div class="box_pictures">
         <div><img class="picture1" src="{{ asset('pictures/corsaires.jpg') }}"></div>
-        <div><img class="picture2" src="{{ asset('pictures/boutique.png') }}"></div>
+        <div><img class="picture2" src="{{ asset('pictures/boutique.jpg') }}"></div>
       </div>
     </section>
 
