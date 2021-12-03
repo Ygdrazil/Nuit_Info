@@ -1,1 +1,1 @@
-document.querySelectorAll('.logo a').removeAttribute("a")
+document.getElementById("logo").style.visibility = "hidden";
