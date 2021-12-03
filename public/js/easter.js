@@ -1,1 +1,1 @@
-document.getElementsByClassName('logo')[0].style.visibility='hidden';
+consol.log(document.getElementsByClassName('logo'))
