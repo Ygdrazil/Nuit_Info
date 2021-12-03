@@ -19,7 +19,7 @@
 			@foreach($intervals as $year => $sauvetages)
 				<h1>{{ $year }} à {{ $year + $interval }}</h1>
 				@foreach($sauvetages as $sauvetage)
-					<h2><a href="">{{ $sauvetage->titre }}</a></h2>
+					<h2><a href="{{ route('sauvetage', $sauvetage->id_sauvetage) }}">{{ $sauvetage->titre }}</a></h2>
 				@endforeach
 			@endforeach
 		</section>
