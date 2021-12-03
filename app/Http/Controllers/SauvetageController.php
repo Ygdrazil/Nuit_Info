@@ -58,6 +58,7 @@ class SauvetageController extends Controller
 			} else {
 				$min = $y - $y%$interval;
 				$max = $min + $interval;
+				
 				$res[$min][] = $sauvetage;
 			};
 		};
