@@ -46,7 +46,7 @@ window.addEventListener("DOMContentLoaded", _ => {
                     console.log(click)
                 };
             }
-            if(parseInt(logo.style.left) <= vw - 200){
+            if(parseInt(logo.style.left) <= vw - 165){
                 if (keyName == "d") {
                     logo.style.left = (parseInt(logo.style.left || 30) + 10)+'px';
                 };
