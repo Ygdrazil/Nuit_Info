@@ -104,6 +104,8 @@ class AccountController extends Controller
 					$user->forceFill([
 						'password' => \Hash::make($request->input('new_password'))
 					])->save();
+
+					return redirect(route('logout'));
 				} else {
 					return back()->withErrors([
 						'new_password' => 'Les mots de passe sont différents.'
