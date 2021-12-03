@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="{{ asset('css/entry.css') }}">
 
 	<!-- SCRIPTS -->
+	<link rel="stylesheet" href="{{ asset('js/entry.js') }}">
 
 	<!-- LIBS -->
 
