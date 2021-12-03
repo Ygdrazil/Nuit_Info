@@ -1,1 +1,1 @@
-console.log(document.getElementsByClassName('logo'))
+console.log(document.getElementsByClassName('logo')[0])
