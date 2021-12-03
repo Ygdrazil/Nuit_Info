@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Sauvetage;
+use \Carbon\Carbon;
 
 class SauvetageController extends Controller
 {
@@ -41,8 +42,19 @@ class SauvetageController extends Controller
 
     public function findAll()
     {
+		$interval = 25;
+
+		$res = [];
+
         $sauvetages = Sauvetage::orderBy('date_sauvetage')->get();
-		$min = $sauvetages[0];
+		$min = Carbon::createFromFormat('Y-m-d', $sauvetages[0]->date_sauvetage)->year;
+		$min -= $min%$interval;
+
+		dd($sauvetages->isNotEmpty());
+		
+		while ($sauvetages->isNotEmpty()) {
+			# code...
+		};
 
 		dd($min);
         return view('sauvetage.afficheSauvetages', compact('sauvetages'));
