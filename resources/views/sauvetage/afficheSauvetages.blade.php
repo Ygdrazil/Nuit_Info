@@ -17,7 +17,10 @@
 		<!-- MAIN -->
 		<section id="main">
 			@foreach($intervals as $year => $sauvetages)
-				@JSON($year)
+				<h1>{{ $year }} à {{ $year + $interval }}</h1>
+				@foreach($sauvetages as $sauvetage)
+					<h2><a href="{{ route('sauvetage', $sauvetage->id_sauvetage) }}">{{ $sauvetage->titre }}</a></h2>
+				@endforeach
 			@endforeach
 		</section>
 
